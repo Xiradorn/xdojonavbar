@@ -1,0 +1,28 @@
+// xDojo Navbar START
+
+#xdojonav.xdojonav
+	a#xhamburger.xhamburger(href="#hamburger")
+		i.fa.fa-bars.fa-fw
+		|  Menu
+	ul
+		li
+			a(href="#link1")
+				i.fa.fa-home
+				|  link1
+		li
+			a(href="#link2")
+				i.fa.fa-gear
+				|  link2
+		li
+			a(href="#link3")
+				i.fa.fa-user-secret
+				|  link3
+		li
+			a(href="#link4")
+				i.fa.fa-superpowers
+				|  link4
+		
+	ul.xdojonav_finder
+		li.xsearch {% INCLUDE 'search_form.html' %}
+
+// xDojo Navbar END
