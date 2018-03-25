@@ -9,7 +9,7 @@ _**Mobile Version**_
 
 **Description:** Navigation Menu xDojo Style. Super customizable navigation menù for phpbb. Thousand color combinations and easy to config. That is a style extension, so there isn't any ACP mudule o panel cor config. Simpli to use and config. In a near future will be the possibility to have a small ACP module for customize the colors and probably the menu. 100% responsive!!!! No JS used!  
 
-**Author:** [Sir Xiradorn](https://github.com/Xiradorn "Tony Frost")
+**Author:** [Sir Xiradorn](https://github.com/Xiradorn "Tony Frost") (@Xiradorn)
 
 **Requirements:**  
 * ***phpBB 3.1.x*** or ***phpBB 3.2.x***  
