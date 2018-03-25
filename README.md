@@ -1,7 +1,9 @@
 # xDojo Navbar
 #### Extension Version: 1.0.0  
-
+*Desktop Version*
 ![screen1](contrib/screen.jpg "screen1") 
+
+*Mobile Version*
 ![screen2](contrib/screen2.jpg "screen2")
 
 **Description:** Navigation Menu xDojo Style. Super customizable navigation menù for phpbb. Thousand color combinations and easy to config. That is a style extension, so there isn't any ACP mudule o panel cor config. Simpli to use and config. In a near future will be the possibility to have a small ACP module for customize the colors and probably the menu. 100% responsive!!!! No JS used!  
