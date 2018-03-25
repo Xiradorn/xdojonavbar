@@ -1,0 +1,96 @@
+.headerbar 
+	margin:
+		bottom: 0px
+	border:
+		radius: 7px 7px 0px 0px
+
+.xdojonav 
+	margin:
+		bottom: 5px
+	border:
+		radius: 0px 0px 7px 7px
+	padding: 0 15px
+	background: linear-gradient(gray, black)
+
+	ul 
+		li 
+			list-style: none
+			float: left
+
+			& > a, 
+			& > a:link, 
+			& > a:visited 
+				padding: 10px 20px
+				display: block
+				text:
+					decoration: none
+					transform: uppercase
+				font:
+					weight: bold
+					size: $font_size
+				color: white
+				transition: background 300ms ease-in-out, color 300ms ease-in-out
+			
+			& > a:hover 
+				background-color: black
+
+		&.xdojonav_finder
+			padding: 0;
+			float: right;
+
+			.search-box
+				margin: 
+					top: 6px
+
+	.xhamburger 
+		display: none
+
+/* media queries */
+@media all and (max-width: 700px) 
+	.headerbar 
+		border-radius: 0	
+
+	.xdojonav 
+		margin:
+			left: -5px !important
+			right: -5px !important
+		border:
+			radius: 0
+		
+		.xhamburger 
+			display: block
+			padding: 12px 20px
+			color: white
+			float: left
+			font-size: ($font_size + 0.2)
+			text-decoration: none
+	
+			&:hover + ul, & + ul:hover 
+				left: auto
+
+		ul
+			position: absolute
+			margin:
+				top: 40px 
+			left: -9999px
+			z-index: 10000
+			width: 70%
+	
+			li 
+				float: none
+
+			&.xdojonav_finder
+				background: transparent
+				left: auto
+				right: 0
+				margin:
+					top: 0px
+
+				@media all and (max-width: 320px)
+					display: none
+
+				.search-box
+					display: block
+					margin:
+						top: 8px
+	

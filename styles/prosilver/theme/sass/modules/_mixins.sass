@@ -1,0 +1,5 @@
+@function x-color($type: '', $color: #000000,  $perc: 0)
+	@if $type == 'lighten'
+		@return lighten($color, $perc) 
+	@else
+		@return darken($color, $perc)

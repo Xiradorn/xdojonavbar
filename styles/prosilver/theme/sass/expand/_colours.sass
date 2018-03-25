@@ -1,0 +1,79 @@
+// instanciate vars for coloring stuff process
+@each $colors_allowed_item in $colors_allowed_list
+	$color_ary: ( top: $colors_allowed_item, bottom: darken($colors_allowed_item, 5%), hover: darken($colors_allowed_item, 15%) )
+
+	$xdojonav: 'xdojonav'
+	
+	@if $colors_allowed_item != #105289
+		$xdojonav: 'xdojonav_' + quote(#{$colors_allowed_item})
+
+	.#{$xdojonav}
+		background: linear-gradient( map-get($color_ary, top), map-get($color_ary, bottom) )
+		
+		@for $i from 1 through 25
+			&.#{$xdojonav}_#{$i}
+				background: linear-gradient( x-color('darken',map-get($color_ary, top),$i), x-color('darken',map-get($color_ary, bottom),$i) )
+				ul 
+					li 
+						& > a:hover 
+							background-color: x-color('darken',map-get($color_ary, hover),$i)
+
+			&.#{$xdojonav}_light_#{$i}
+				background: linear-gradient( x-color('lighten',map-get($color_ary, top),$i), x-color('lighten',map-get($color_ary, bottom),$i) )
+				ul 
+					li 
+						& > a:hover 
+							background-color: x-color('lighten',map-get($color_ary, hover),$i)
+		
+		ul 
+			li 
+				& > a:hover 
+					background-color: map-get($color_ary, hover)
+		
+		.search-header
+			box-shadow: 0 0 4px darken(map-get($color_ary, top), 20%)
+
+			.button-search, .button-search-end
+				// background: linear-gradient( lighten(map-get($color_ary, top), 60%), lighten(map-get($color_ary, bottom), 60%) )
+				&:hover i
+					color: map-get($color_ary, top)
+
+	/* media queries */
+	@media all and (max-width: 700px) 
+		.#{$xdojonav}
+			@for $i from 1 through 25
+				&.#{$xdojonav}_#{$i}
+					.xhamburger
+						background: 
+							color: x-color('darken',map-get($color_ary, hover),$i)
+				&.#{$xdojonav}_light_#{$i}
+					.xhamburger
+						background: 
+							color: x-color('lighten',map-get($color_ary, hover),$i)		
+			.xhamburger
+				background: 
+					color: map-get($color_ary, hover)
+		
+		.#{$xdojonav}
+			ul 
+				background:
+					color: map-get($color_ary, top)
+				box-shadow: 0 0 6px map-get($color_ary, hover)
+
+				&.xdojonav_finder
+					box-shadow: none !important
+					background:
+						color: transparent !important
+
+			@for $i from 1 through 25
+				&.#{$xdojonav}_#{$i}
+					ul
+						background: 
+							color: x-color('darken',map-get($color_ary, top),$i)
+				&.#{$xdojonav}_light_#{$i}
+					ul
+						background: 
+							color: x-color('lighten',map-get($color_ary, top),$i)
+
+				
+	
