@@ -47,9 +47,9 @@ _**Mobile Version**_
 * in some cases, the board cache needs to be cleared
 
 **Style Support:**  
-Currently it perfectly work on prosilver. Other style will be probably added in future.  
+Currently it perfectly work on prosilver and prosilver Special Edition. Other style will be probably added in future.  
 
 **Permissions:**  
-Works with normal bbcode permission  
+-    
 
 Thank you so much for all your suggestions.  
