@@ -1,7 +1,7 @@
 {
     "name": "xiradorn/xdojonavbar",
     "type": "phpbb-extension",
-    "description": "Navigation Menu xDojo Style",
+    "description": "Navigation Menu xDojo Style. Super customizable navigation menù for phpbb. Thousand color combinations and easy to config.",
     "homepage": "http://stargate.xiradorn.it/32x/",
     "version": "1.0.0",
     "time": "2018-03-23",
@@ -22,6 +22,11 @@
         "display-name": "xDojo Navbar",
         "soft-require": {
             "phpbb/phpbb": ">=3.1.4,<3.2.0"
+        },
+        "version-check": {
+            "host": "xiradorn.it",
+            "directory": "/phpbb_version/xdojonavbar",
+            "filename": "version_check"
         }
     }
 }
