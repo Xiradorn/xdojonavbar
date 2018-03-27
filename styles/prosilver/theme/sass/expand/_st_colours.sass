@@ -1,0 +1,39 @@
+// instanciate vars for coloring with stylename
+@each $style_color_name, $style_color_data_ary in $styles_color
+	$color_ary: ( top: map-get($style_color_data_ary, key), bottom: darken(map-get($style_color_data_ary, key), 5%), hover: darken(map-get($style_color_data_ary, key), 15%) )
+
+	$xdojonav: 'xdojonav'
+
+	.#{$xdojonav}_#{$style_color_name}
+		background: map-get($style_color_data_ary, grad)
+		
+		ul 
+			li 
+				& > a:hover 
+					background-color: map-get($color_ary, hover)
+		
+		.search-header
+			box-shadow: 0 0 4px darken(map-get($color_ary, top), 20%)
+
+			.button-search, .button-search-end
+				// background: linear-gradient( lighten(map-get($color_ary, top), 60%), lighten(map-get($color_ary, bottom), 60%) )
+				&:hover i
+					color: map-get($color_ary, top)
+
+	/* media queries */
+	@media all and (max-width: 700px) 
+		.#{$xdojonav}
+			.xhamburger
+				background: 
+					color: map-get($color_ary, hover)
+		
+		.#{$xdojonav}
+			ul 
+				background:
+					color: map-get($color_ary, top)
+				box-shadow: 0 0 6px map-get($color_ary, hover)
+
+				&.xdojonav_finder
+					box-shadow: none !important
+					background:
+						color: transparent !important
