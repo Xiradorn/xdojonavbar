@@ -1,6 +1,6 @@
 // xDojo Navbar START
 
-#xdojonav.xdojonav.xdojonav_prosilver
+#xdojonav.xdojonav
 	a#xhamburger.xhamburger(href="#hamburger")
 		i.fa.fa-bars.fa-fw
 		|  Menu
@@ -9,6 +9,24 @@
 			a(href="#link1")
 				i.fa.fa-home
 				|  link1
+			.xdojonav_underhover
+				ul.wide_under
+					li
+						a(href="#sublinkwide") sublinkwide
+				ul
+					li
+						a(href="#sublink1") sublink1
+					li
+						a(href="#sublink2") sublink2
+					li
+						a(href="#sublink3") sublink3
+				ul
+					li
+						a(href="#sublink1") sublink1
+					li
+						a(href="#sublink2") sublink2
+					li
+						a(href="#sublink3") sublink3
 		li
 			a(href="#link2")
 				i.fa.fa-gear
@@ -21,6 +39,22 @@
 			a(href="#link4")
 				i.fa.fa-superpowers
 				|  link4
+			.xdojonav_underhover_xl
+				ul
+					li
+						a(href="#sublink1") sublink1
+					li
+						a(href="#sublink2") sublink2
+				ul
+					li
+						a(href="#sublink3") sublink3
+					li
+						a(href="#sublink4") sublink4
+				ul
+					li
+						a(href="#sublink5") sublink5
+					li
+						a(href="#sublink6") sublink6
 		
 	ul.xdojonav_finder
 		li.xsearch {% INCLUDE 'search_form.html' %}
