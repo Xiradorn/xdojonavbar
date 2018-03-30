@@ -34,16 +34,17 @@
 				color: white
 				transition: background 300ms ease-in-out, color 300ms ease-in-out
 			
-			& > a:hover 
+			& > a:hover, &:hover > a 
 				background-color: black
 
 			& > div.xdojonav_underhover, & > div.xdojonav_underhover_xl
 				position: absolute
 				border:
-					radius: 8px
+					radius: 5px
 				top: 30px
+				left: -5px
 				width: 320px
-				display: block
+				display: none
 				z-index: 10000
 				background: linear-gradient(gray, black)
 
@@ -55,12 +56,16 @@
 					li
 						display: block
 						float: none
+						height: auto
 				
 					&.wide_under
-						width: auto
+						width: 100%
 
 			& > div.xdojonav_underhover_xl					
 				width: 480px
+
+			&:hover > div.xdojonav_underhover, &:hover > div.xdojonav_underhover_xl
+				display: block
 
 		&.xdojonav_finder
 			padding: 0;
@@ -84,6 +89,7 @@
 			right: -5px !important
 		border:
 			radius: 0
+		padding: 0px
 		
 		.xhamburger 
 			display: block
@@ -102,10 +108,25 @@
 				top: 40px 
 			left: -9999px
 			z-index: 10000
-			width: 70%
+			width: auto
 	
 			li 
 				float: none
+				position: relative
+
+				& > div.xdojonav_underhover, & > div.xdojonav_underhover_xl
+					position: absolute
+					top: 0px
+					left: 100%
+					width: 140px
+					border:
+						radius: 0px 7px 7px 7px
+
+					ul
+						margin: 
+							top: 0px
+						left: 0
+					
 
 			&.xdojonav_finder
 				background: transparent
@@ -114,7 +135,7 @@
 				margin:
 					top: 0px
 
-				@media all and (max-width: 320px)
+				@media all and (max-width: 319px)
 					display: none
 
 				.search-box

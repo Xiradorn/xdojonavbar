@@ -9,8 +9,8 @@
 		
 		ul 
 			li 
-				& > a:hover 
-					background-color: map-get($color_ary, hover)
+				& > a:hover, &:hover > a 
+					background: map-get($color_ary, hover)
 				& > div.xdojonav_underhover, & > div.xdojonav_underhover_xl
 					background: map-get($style_color_data_ary, grad)
 					box-shadow: 0 2px 2px darken(map-get($color_ary, top), 20%)
@@ -20,8 +20,10 @@
 
 			.button-search, .button-search-end
 				// background: linear-gradient( lighten(map-get($color_ary, top), 60%), lighten(map-get($color_ary, bottom), 60%) )
+				& i
+					color: map-get($color_ary, top) !important
 				&:hover i
-					color: map-get($color_ary, top)
+					color: map-get($color_ary, bottom) !important
 
 	/* media queries */
 	@media all and (max-width: 700px) 
