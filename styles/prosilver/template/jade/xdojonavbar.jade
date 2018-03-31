@@ -1,6 +1,10 @@
+// vars
+- var txtVarS = "Lorem ipsum dolor sit, amet consectetur "
+- var txtVar = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit quis cumque eos voluptatibus"
+- var txtVar50 = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, animi excepturi nemo laboriosam, maxime tempore commodi cupiditate debitis vel, sint quas"
 // xDojo Navbar START
 
-#xdojonav.xdojonav.xdojonav_prosilver
+#xdojonav.xdojonav
 	a#xhamburger.xhamburger(href="#hamburger")
 		i.fa.fa-bars.fa-fw
 		|  Menu
@@ -12,21 +16,27 @@
 			.xdojonav_underhover
 				ul.wide_under
 					li
-						a(href="#sublinkwide") sublinkwide
+						a(href="#sublinkwide")
+							h4 Testo
+							p #{txtVar}
 				ul
 					li
-						a(href="#sublink1") sublink1
+						a(href="#sublink1")
+							h4 Testo
+							p #{txtVarS}
 					li
-						a(href="#sublink2") sublink2
-					li
-						a(href="#sublink3") sublink3
+						a(href="#sublink2")
+							h4 Testo
+							p #{txtVarS}
 				ul
 					li
-						a(href="#sublink1") sublink1
+						a(href="#sublink1")
+							h4 Testo
+							p #{txtVarS}
 					li
-						a(href="#sublink2") sublink2
-					li
-						a(href="#sublink3") sublink3
+						a(href="#sublink2")
+							h4 Testo
+							p #{txtVarS}
 		li
 			a(href="#link2")
 				i.fa.fa-gear
@@ -42,22 +52,36 @@
 			.xdojonav_underhover_xl
 				ul.wide_under
 					li
-						a(href="#sublinkwide") sublinkwide
+						a(href="#sublinkwide") 
+							h4 Testo
+							p #{txtVar50}
 				ul
 					li
-						a(href="#sublink1") sublink1
+						a(href="#sublink1")
+							h4 Testo
+							p #{txtVarS}
 					li
-						a(href="#sublink2") sublink2
+						a(href="#sublink2")
+							h4 Testo
+							p #{txtVarS}
 				ul
 					li
-						a(href="#sublink3") sublink3
+						a(href="#sublink1")
+							h4 Testo
+							p #{txtVarS}
 					li
-						a(href="#sublink4") sublink4
+						a(href="#sublink2")
+							h4 Testo
+							p #{txtVarS}
 				ul
 					li
-						a(href="#sublink5") sublink5
+						a(href="#sublink1")
+							h4 Testo
+							p #{txtVarS}
 					li
-						a(href="#sublink6") sublink6
+						a(href="#sublink2")
+							h4 Testo
+							p #{txtVarS}
 		
 	ul.xdojonav_finder
 		li.xsearch {% INCLUDE 'search_form.html' %}

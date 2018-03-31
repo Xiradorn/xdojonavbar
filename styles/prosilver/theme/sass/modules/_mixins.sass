@@ -3,3 +3,6 @@
 		@return lighten($color, $perc) 
 	@else
 		@return darken($color, $perc)
+
+@function coloring_composition_ary($ary_single_item_color)
+	@return ( top: $ary_single_item_color, bottom: darken($ary_single_item_color, 5%), hover: darken($ary_single_item_color, 15%), subhover: darken($ary_single_item_color, 2%) )

@@ -12,8 +12,12 @@
 				& > a:hover, &:hover > a 
 					background: map-get($color_ary, hover)
 				& > div.xdojonav_underhover, & > div.xdojonav_underhover_xl
-					background: map-get($style_color_data_ary, grad)
+					// background: map-get($style_color_data_ary, grad)
+					background: map-get($color_ary, hover)
 					box-shadow: 0 2px 2px darken(map-get($color_ary, top), 20%)
+					ul
+						li:hover, li > a:hover
+							background: map-get($color_ary, subhover)
 		
 		.search-header
 			box-shadow: 0 0 4px darken(map-get($color_ary, top), 20%)
