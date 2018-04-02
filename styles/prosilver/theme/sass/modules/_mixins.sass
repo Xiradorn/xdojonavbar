@@ -1,11 +1,14 @@
+// color function for dark light color
 @function x-color($type: '', $color: #000000,  $perc: 0)
 	@if $type == 'lighten'
 		@return lighten($color, $perc) 
 	@else
 		@return darken($color, $perc)
 
+// functions for extraction top, bottom, hover and subhover color percentage from an item/array 
 @function coloring_composition_ary($ary_single_item_color)
 	@return ( top: $ary_single_item_color, bottom: darken($ary_single_item_color, 5%), hover: darken($ary_single_item_color, 15%), subhover: darken($ary_single_item_color, 2%) )
 
 @function coloring_styles_composition_ary($ary_style_item_color, $key)
 	@return ( top: map-get($ary_style_item_color, $key), bottom: darken(map-get($ary_style_item_color, $key), 5%), hover: darken(map-get($ary_style_item_color, $key), 15%), subhover: darken(map-get($ary_style_item_color, $key), 2%) )
+

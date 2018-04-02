@@ -1,10 +1,12 @@
 //- Vars for demo
-- var txtVarS = "Lorem ipsum dolor sit, amet consectetur "
-- var txtVar = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit quis cumque eos voluptatibus"
+- var txtVarS = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!"
+- var txtVar = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo deleniti, harum eligendi odit laboriosam nobis numquam error nihil quo."
 - var txtVar50 = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, animi excepturi nemo laboriosam, maxime tempore commodi cupiditate debitis vel, sint quas"
+- var exampleImgSrc = "https://www.phpbb.com/assets/images/aliens/alien32.png"
+- var exampleImgSrc2 = "https://www.phpbb.com/assets/images/images/customisation-db-icon.png"
 // xDojo Navbar START
 
-#xdojonav.xdojonav.xdojonav_prosilver
+div#xdojonav(class="xdojonav xdojonav_{{ T_TEMPLATE_NAME }}")
 	a#xhamburger.xhamburger(href="#hamburger")
 		i.fa.fa-bars.fa-fw
 		|  Menu
@@ -16,9 +18,10 @@
 				i.fa.fa-caret-down
 			.xdojonav_underhover
 				ul.wide_under
-					li
+					li.ext_link
 						a(href="#sublinkwide")
 							h4 Testo
+							img(src=exampleImgSrc2, alt="DB Image")
 							p #{txtVar}
 				ul
 					li
@@ -52,9 +55,10 @@
 				i.fa.fa-caret-down
 			.xdojonav_underhover_xl
 				ul.wide_under
-					li
+					li.ext_link
 						a(href="#sublinkwide") 
 							h4 Testo
+							img(src=exampleImgSrc, alt="Alien Image")
 							p #{txtVar50}
 				ul
 					li
@@ -66,7 +70,7 @@
 							h4 Testo
 							p #{txtVarS}
 				ul
-					li
+					li.ext_link
 						a(href="#sublink1")
 							h4 Testo
 							p #{txtVarS}
@@ -75,7 +79,7 @@
 							h4 Testo
 							p #{txtVarS}
 				ul
-					li
+					li.ext_link
 						a(href="#sublink1")
 							h4 Testo
 							p #{txtVarS}

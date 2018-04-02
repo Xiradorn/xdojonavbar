@@ -1,0 +1,41 @@
+// Variables
+$primary: #105289;
+$font_size: 1.1em;
+$sub_menu_item_width: 160px;
+$external_img: "data:image/gif;base64,R0lGODlhEgASAIABAHCQpgAAACH5BAEAAAEALAAAAAASABIAAAIdjI+py+0PIwMUyFBdrrb1rRlU1F0lBnHjxbbu+xQAOw==";
+
+// Colors Variables
+$reddish_color_ary: (red);
+$bluish_color_ary: (blue);
+$greenish_color_ary: (green);
+$graysh_color_ary: (gray);
+@if ($minimal_colors == 'minimal') {
+	$reddish_color_ary: (red, orangered, orange, yellow);
+	$bluish_color_ary: (indigo, purple, blue, navy);
+	$greenish_color_ary: (green, forestgreen, lime, limegreen);
+	$graysh_color_ary: (gray, dimgray, slategray, darkslategray, black);
+}
+@else if ($minimal_colors == 'full') {
+	$reddish_color_ary: (darkred, red, orangered, orange, darkorange, pink, firebrick, crimson, hotpink, mediumvioletred, yellow, khaki, gold, goldenrod, brown, maroon);
+	$bluish_color_ary: (indigo, purple, fuchsia, blue, navy, lightsteelblue, royalblue, blue, navy, cyan, teal, midnightblue, darkslateblue, darkmagenta, darkviolet, blueviolet);
+	$greenish_color_ary: (green, forestgreen, lime, olive, yellowgreen, limegreen, springgreen, seagreen, darkgreen, darkolivegreen,olivedrab, palegreen, chartreuse);
+	$graysh_color_ary: (gray, dimgray, lightslategray, slategray, darkslategray, black, silver, gainsboro);
+}
+
+// Join lists
+$rblist: join($reddish_color_ary, $bluish_color_ary);
+$gglist: join($greenish_color_ary, $graysh_color_ary);
+$rgb_list: join($rblist, $gglist);
+
+$colors_allowed_list: join($primary, $rgb_list);
+
+$styles_color: ( 
+	prosilver: ( 
+		key: #0076B1, 
+		grad: linear-gradient(to bottom, #6ACEFF 0%,#0076B1 2px,#12A3EB 92px,#12A3EB 100%) 
+	), 
+	prosilver_se: (
+		key: desaturate(#0076B1, 90%),
+		grad: linear-gradient(to bottom, desaturate(#6ACEFF, 90%) 0%,desaturate(#0076B1, 90%) 2px,desaturate(#12A3EB, 90%) 92px,desaturate(#12A3EB, 90%) 100%)
+	),
+);
