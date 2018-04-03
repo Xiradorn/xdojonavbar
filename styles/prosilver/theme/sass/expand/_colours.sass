@@ -51,8 +51,19 @@
 					background: linear-gradient( map-get($color_ary, hover), map-get($color_ary, bottom) )
 					box-shadow: 0 2px 2px darken(map-get($color_ary, top), 20%)
 					ul
-						li:hover, li > a:hover
-							background: map-get($color_ary, subhover)
+						li
+							&:hover, & > a:hover
+								background: map-get($color_ary, subhover)
+							&.ext_link
+								& > a, 
+								& > a:link, 
+								& > a:visited 
+									@if hue( $colors_allowed_item ) > 40 and hue( $colors_allowed_item ) < 180
+										background:
+											image: url( map-get($external_img, dark) )
+									@else
+										background:
+											image: url( map-get($external_img, light) )
 					.underhover_bottom
 						@if hue( $colors_allowed_item ) > 40 and hue( $colors_allowed_item ) < 180
 							a, a:link, a:visited

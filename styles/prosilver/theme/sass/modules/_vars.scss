@@ -2,7 +2,11 @@
 $primary: #105289;
 $font_size: 1.1em;
 $sub_menu_item_width: 160px;
-$external_img: "data:image/gif;base64,R0lGODlhEgASAIABAHCQpgAAACH5BAEAAAEALAAAAAASABIAAAIdjI+py+0PIwMUyFBdrrb1rRlU1F0lBnHjxbbu+xQAOw==";
+$external_img: (
+	basic: "img/ext.png",
+	dark: "img/extb.png",
+	light: "img/extw.png"
+);
 
 // Colors Variables
 $reddish_color_ary: (red);
