@@ -54,7 +54,7 @@ _Next, on the Extension site a very usefull tool to calculate the color easly as
 Currently it perfectly work on prosilver and prosilver Special Edition. Other style will be probably added in future.  
 
 **Permissions:**  
-| -
+Ftp permission for customization process.  
 
 ----    
 ## Customization Process:  
