@@ -1,5 +1,5 @@
-# xDojo Navbar
-#### Extension Version: 1.0.0  
+# xSensei - xDojo Navbar
+#### Extension Version: 2.0.0  
 
 _**Desktop Version**_  
 ![screen1](contrib/screen.jpg "screen1") 
@@ -7,7 +7,9 @@ _**Desktop Version**_
 _**Mobile Version**_  
 ![screen2](contrib/screen2.jpg "screen2")
 
-**Description:** Navigation Menu xDojo Style. Super customizable navigation menù for phpbb. Thousand color combinations and easy to config. That is a style extension, so there isn't any ACP mudule o panel cor config. Simpli to use and config. In a near future will be the possibility to have a small ACP module for customize the colors and probably the menu. 100% responsive!!!! No JS used!  
+**Description:** xSensei Navigation Menu xDojo Style. Super customizable navigation menù for phpbb. Thousand color combinations and easy to config. That is a style extension, so there isn't any ACP mudule o panel cor config. Simply to use and config. In a near future will be the possibility to have a small ACP module for customize the colors and probably the menu. 100% responsive!!!! No JS used! **Now we have a multi level menu, external link indication, images into wide links and a bottom link"
+
+_Inspired form **phpbb Nav Menu** and totally rewritted from scratch in jade/sass_
 
 _Next, on the Extension site a very usefull tool to calculate the color easly as possibile and viewing the preview_
 
@@ -52,9 +54,10 @@ _Next, on the Extension site a very usefull tool to calculate the color easly as
 Currently it perfectly work on prosilver and prosilver Special Edition. Other style will be probably added in future.  
 
 **Permissions:**  
--    
+| -
 
-#### Customization Process:  
+----    
+## Customization Process:  
 Follow the step for customize the menu.  
 **Link Customization:** For add, remove, customize the menù li, you can open this file `(your forum root)/ext/xiradorn/xdojonavbar/styles/prosilver/template/xdojonavbar.html` and then add, remove or customize those lines
 
