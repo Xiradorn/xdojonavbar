@@ -107,8 +107,11 @@ _Lighten color:_ Same procedure as before, just small different class. The class
 
 ----
 
-## Update - Sublevel menu customization  
-This step is a bit more complicated, but not so much. First i want show the difference between a single line menu and a multilevel step. So the single line is just this piece of code:  
+## Update - Multilevel Menu customization  
+This step is a bit more complicated, but not so much. 
+
+#### Single-Level vs Multi-Level Menu structure
+First i want show the difference between a single line menu and a multilevel step. So the single line is just this piece of code:  
 
 	<li><a href="#link1"><i class="fa fa-home"></i> Link1 <i class="fa fa-caret-down"></i></a></li>
 
@@ -154,8 +157,12 @@ Instead a multilevel menu in build this way:
 		</div>
 	</li>
 
-Complex structure? Not so much. In this example there is all possibility for customize the second level. In particular this is an example of a submenu with 2 column. We also have a 3 cols menu using this class `xdojonav_underhover_xl` instead of using the normal `xdojonav_underhover`. So in this case we have a 3 columns in this way (or a unique row long over 3 cols)
+Complex structure? Not so much. In this example there is all possibility for customize the second level. 
 
+#### Multilevel with 2 or 3 columns and wide item
+The structure is quite simple: `ul` define the column and the `li` the items inside the column. The below is a typical example of a submenu with 2 column and 2 items inside (one for col). 
+
+		<div class="xdojonav_underhover">
 			<ul>
 				<li>
 					<a href="#sublink1">
@@ -163,17 +170,97 @@ Complex structure? Not so much. In this example there is all possibility for cus
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!</p>
 					</a>
 				</li>
+			<ul><!-- .left menu w/ 1 item -->
+			</ul>
 				<li>
 					<a href="#sublink2">
 						<h4>Testo</h4>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!</p>
 					</a>
 				</li>
+			</ul><!-- .right menu w/ 1 item -->
+		</div>
+
+We also have a 3 cols menu. We can build a simila example with a 3 col menu and 3 items (one per col). For this task we can use this class `xdojonav_underhover_xl` instead of using the normal `xdojonav_underhover`.
+
+		<div class="xdojonav_underhover_xl">
+			<ul>
+				<li>
+					<a href="#sublink1">
+						<h4>Testo</h4>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!</p>
+					</a>
+				</li>
+			</ul><!-- .left menu w/ 1 item -->
+			<ul>
+				<li>
+					<a href="#sublink2">
+						<h4>Testo</h4>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!</p>
+					</a>
+				</li>
+			<ul><!-- .center menu w/ 1 item -->
+			</ul>
 				<li>
 					<a href="#sublink3">
 						<h4>Testo</h4>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!</p>
 					</a>
 				</li>
-			</ul>
+			</ul><!-- .right menu w/ 1 item -->
+		</div>
 
+More simple now eh! (i hope eheheheh). So we can have also a wide item (long 2 or 3 col depends on submenu) in this way and with the help of this class `wide_under`. In this exaple we will bild a 3 item menu (1 wide + 2 normal - 1 per col). and the code is just like this
+
+		<div class="xdojonav_underhover">
+			<ul>
+				<li>
+					<a href="#sublink1">
+						<h4>Testo</h4>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!</p>
+					</a>
+				</li>
+			<ul><!-- .wide menu w/ 1 item long 2 cols -->
+
+			</ul>
+				<li>
+					<a href="#sublink2">
+						<h4>Testo</h4>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!</p>
+					</a>
+				</li>
+			</ul><!-- .left menu w/ 1 item -->
+			</ul>
+				<li>
+					<a href="#sublink2">
+						<h4>Testo</h4>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!</p>
+					</a>
+				</li>
+			</ul><!-- .right menu w/ 1 item -->
+		</div>
+
+#### Esternal links and Image customize
+We can use a simple tricks for notify the external link or a target blank links with the help od a smarter class called `ext_link` used in li sub item in this way
+
+			</ul>
+				<li class="ext_link"><!-- .external menu link item -->
+					<a href="#sublink2">
+						<h4>Testo</h4>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!</p>
+					</a>
+				</li>
+			</ul>
+			</ul>
+				<li><!-- .normal menu link item -->
+					<a href="#sublink2">
+						<h4>Testo</h4>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!</p>
+					</a>
+				</li>
+			</ul>
+			
+The icon color will auto adjust its color in case the background is darker or lighter.  
+
+##### Suggestions and Help  
+If you need help, or if you want suggest me idead/problem/bugs/New Features, may use the github system for now using issues or other built in system.
