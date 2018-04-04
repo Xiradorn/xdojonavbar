@@ -11,8 +11,6 @@ _**Mobile Version**_
 
 _Inspired form **phpbb Nav Menu** and totally rewritted from scratch in jade/sass. You can use this menu in both ways: single menu level, or multilevel_
 
-_Next, on the Extension site a very usefull tool to calculate the color easly as possibile and viewing the preview_
-
 **Author:** [Sir Xiradorn](https://github.com/Xiradorn "Tony Frost") (@Xiradorn)
 
 **Requirements:**  
@@ -22,12 +20,19 @@ _Next, on the Extension site a very usefull tool to calculate the color easly as
 **Release Download:** xDojo Navbar - https://github.com/XiradornLab/phpbb_ext_xdojonavbar/releases  
 
 **Features:**  
-* navigation bar nice and clear for phpbb 3.1 or 3.2
-* fully responsive
-* no js used
-* thousand of color mix for customize the bar apperance without any image. CSS3 gradient.
-* font-awesome icon for customize the nav links
+* Navigation Bar nice and clear for phpbb 3.1 or 3.2
+* Fully responsive
+* NO js used
+* Thousand of color mix for customize the bar apperance without any image. CSS3 gradient.
+* Font-awesome icon for customize the nav links
 * CSS minified for super speed load
+* Single-level or Multi-Level support
+* Auto coloring style for default phpbb style. _Now compatible with: **Prosilver, Prosilver SE**_ 
+* Multi level with 2 or 3 columns (2 cols = `xdojonav_underhover` | 3 cols = `xdojonav_underhover_xl`)
+* Full width element in submenu width class (`ul.wide_under`)
+* Ext links notification with class used in single li sub element (`li.ext_link`)
+* Image on rightside (suggested for only wide element)
+* Footer submenu element link on bottom
 
 **For Developers:**  
 * written in JADE (PUG) and SASS
