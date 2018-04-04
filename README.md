@@ -19,7 +19,7 @@ _Inspired form **phpbb Nav Menu** and totally rewritted from scratch in jade/sas
 * ***phpBB 3.1.x*** or ***phpBB 3.2.x***  
 
 **Repository:** xDojo Navbar - https://github.com/XiradornLab/phpbb_ext_xdojonavbar  
-**Release Download:** xDojo Navbar - https://github.com/XiradornLab/phpbb_ext_xdojonavbar/releases/lastest  
+**Release Download:** xDojo Navbar - https://github.com/XiradornLab/phpbb_ext_xdojonavbar/releases/latest  
 
 **Features:**  
 * Navigation Bar nice and clear for phpbb 3.1 or 3.2
