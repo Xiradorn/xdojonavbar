@@ -3,9 +3,11 @@
 
 _**Desktop Version**_  
 ![screen1](contrib/screen.jpg "screen1") 
+![screen2](contrib/screen2.jpg "screen2") 
 
 _**Mobile Version**_  
-![screen2](contrib/screen2.jpg "screen2")
+![screen3](contrib/screen3.jpg "screen3")
+![screen4](contrib/screen4.jpg "screen4")
 
 **Description:** xSensei Navigation Menu xDojo Style. Super customizable navigation menù for phpbb. Thousand color combinations and easy to config. That is a style extension, so there isn't any ACP mudule o panel cor config. Simply to use and config. In a near future will be the possibility to have a small ACP module for customize the colors and probably the menu. 100% responsive!!!! No JS used! **Now we have a multi level menu, external link indication, images into wide links and a bottom link"
 
