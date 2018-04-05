@@ -1,5 +1,5 @@
 # xSensei - xDojo Navbar
-#### Extension Version: 2.0.0  
+#### Extension Version: 2.0.1  
 
 _**Desktop Version**_  
 ![screen1](contrib/screen.jpg "screen1") 
