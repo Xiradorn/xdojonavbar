@@ -1,5 +1,5 @@
 # xSensei - xDojo Navbar
-#### Extension Version: 2.0.1  
+#### Extension Version: 2.1.0  
 
 _**Desktop Version**_  
 ![screen1](contrib/screen.jpg "screen1") 
@@ -68,13 +68,14 @@ Ftp permission for customization process.
 Follow the step for customize the menu.  
 **Link Customization:** For add, remove, customize the menù li, you can open this file `(your forum root)/ext/xiradorn/xdojonavbar/styles/prosilver/template/xdojonavbar.html` and then add, remove or customize those lines
 
-	<li><a href="#link1"><i class="fa fa-home"></i> link1</a></li>
+```html
+<li><a href="#link1"><i class="fa fa-home"></i> link1</a></li>
+```
 
 and change as you wish. For example i want use this link `http://example.com/home` so i can edit link in this way.
 
 ```html
 <li><a href="http://example.com/home"><i class="fa fa-home"></i> Home</a></li>
-```
 
 You can also customize the near icon. Check the icon list. Click here: [Font-Awesome](https://fontawesome.com/)
 
@@ -101,7 +102,7 @@ _Darken color:_ I suppose to change the orangered in a more dark tone of that. S
 
 ```html
 <div class="xdojonav xdojonav_orangered" id="xdojonav">
-	```
+```
 
 So at this point i use a similar class with a number (**NUM**) from 1 to 25 like this `xdojonav_COLORNAME_NUM`. **IMPORTANT** you must use the same color as the previous class. So we can edit this line like this
 
