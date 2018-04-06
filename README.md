@@ -106,7 +106,9 @@ _Darken color:_ I suppose to change the orangered in a more dark tone of that. S
 
 So at this point i use a similar class with a number (**NUM**) from 1 to 25 like this `xdojonav_COLORNAME_NUM`. **IMPORTANT** you must use the same color as the previous class. So we can edit this line like this
 
-	<div class="xdojonav xdojonav_orangered xdojonav_orangered_10" id="xdojonav">
+```html
+<div class="xdojonav xdojonav_orangered xdojonav_orangered_10" id="xdojonav">
+```
 
 End!!!!  
 
