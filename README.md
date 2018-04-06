@@ -76,6 +76,7 @@ and change as you wish. For example i want use this link `http://example.com/hom
 
 ```html
 <li><a href="http://example.com/home"><i class="fa fa-home"></i> Home</a></li>
+```
 
 You can also customize the near icon. Check the icon list. Click here: [Font-Awesome](https://fontawesome.com/)
 
