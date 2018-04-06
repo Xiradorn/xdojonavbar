@@ -1,0 +1,244 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>README.md</title>
+      </head>
+      <body>
+        <h1 id="xsensei-xdojo-navbar">xSensei - xDojo Navbar</h1>
+<h4 id="extension-version-2-0-1">Extension Version: 2.0.1</h4>
+<p><em><strong>Desktop Version</strong></em><br><img src="contrib/screen.jpg" alt="screen1" title="screen1"> 
+<img src="contrib/screen2.jpg" alt="screen2" title="screen2"> </p>
+<p><em><strong>Mobile Version</strong></em><br><img src="contrib/screen3.jpg" alt="screen3" title="screen3">
+<img src="contrib/screen4.jpg" alt="screen4" title="screen4"></p>
+<p><strong>Description:</strong> xSensei Navigation Menu xDojo Style. Super customizable navigation menù for phpbb. Thousand color combinations and easy to config. That is a style extension, so there isn&#39;t any ACP mudule o panel cor config. Simply to use and config. In a near future will be the possibility to have a small ACP module for customize the colors and probably the menu. 100% responsive!!!! No JS used! **Now we have a multi level menu, external link indication, images into wide links and a bottom link&quot;</p>
+<p><em>Inspired form <strong>phpbb Nav Menu</strong> and totally rewritted from scratch in jade/sass. You can use this menu in both ways: single menu level, or multilevel</em></p>
+<p><strong>Author:</strong> <a href="https://github.com/Xiradorn" title="Tony Frost">Sir Xiradorn</a> (@Xiradorn)</p>
+<p><strong>Requirements:</strong>  </p>
+<ul>
+<li><strong><em>phpBB 3.1.x</em></strong> or <strong><em>phpBB 3.2.x</em></strong>  </li>
+</ul>
+<p><strong>Repository:</strong> xDojo Navbar - <a href="https://github.com/XiradornLab/phpbb_ext_xdojonavbar">https://github.com/XiradornLab/phpbb_ext_xdojonavbar</a><br><strong>Release Download:</strong> xDojo Navbar - <a href="https://github.com/XiradornLab/phpbb_ext_xdojonavbar/releases/latest">https://github.com/XiradornLab/phpbb_ext_xdojonavbar/releases/latest</a>  </p>
+<p><strong>Features:</strong>  </p>
+<ul>
+<li>Navigation Bar nice and clear for phpbb 3.1 or 3.2</li>
+<li>Fully responsive</li>
+<li>NO js used</li>
+<li>Thousand of color mix for customize the bar apperance without any image. CSS3 gradient.</li>
+<li>Font-awesome icon for customize the nav links</li>
+<li>CSS minified for super speed load</li>
+<li>Single-level or Multi-Level support</li>
+<li>Auto coloring style for default phpbb style. <em>Now compatible with: <strong>Prosilver, Prosilver SE</strong></em> </li>
+<li>Multi level with 2 or 3 columns (2 cols = <code>xdojonav_underhover</code> | 3 cols = <code>xdojonav_underhover_xl</code>)</li>
+<li>Full width element in submenu width class (<code>ul.wide_under</code>)</li>
+<li>Ext links notification with class used in single li sub element (<code>li.ext_link</code>)</li>
+<li>Image on rightside (suggested for only wide element)</li>
+<li>Footer submenu element link on bottom</li>
+</ul>
+<p><strong>For Developers:</strong>  </p>
+<ul>
+<li>written in JADE (PUG) and SASS</li>
+<li>thare is a config var for develop a super lightweight version of css. </li>
+</ul>
+<h4 id="installation-">Installation:</h4>
+<ul>
+<li>Download the latest release from (<a href="https://github.com/XiradornLab/phpbb_ext_xdojonavbar/releases)">https://github.com/XiradornLab/phpbb_ext_xdojonavbar/releases)</a>.</li>
+<li>Unzip the downloaded release, and change the name of the folder to <code>xdojonavbar</code>.</li>
+<li>In the <code>ext</code> directory of your phpBB board, create a new directory named <code>xiradorn</code> (if it does not already exist).</li>
+<li>Copy the <code>xdojonavbar</code> folder to <code>/ext/xiradorn/</code> (if done correctly, you&#39;ll have the main extension class at (your forum root)/ext/xiradorn/xdojonavbar/composer.json).</li>
+<li>Navigate in the ACP to <code>Customise -&gt; Manage extensions</code>.</li>
+<li>Look for <code>xDojo Navbar</code> under the Disabled Extensions list, and click its <code>Enable</code> link.[/list]</li>
+</ul>
+<h4 id="update-instructions-">Update Instructions:</h4>
+<ul>
+<li>disable the extension</li>
+<li>delete extension data</li>
+<li>delete extension files from server</li>
+<li>download latest extension files from GitHub (if you haven&#39;t already)</li>
+<li>upload new files to the server</li>
+<li>enable extension</li>
+<li>in some cases, the board cache needs to be cleared</li>
+</ul>
+<p><strong>Style Support:</strong><br>Currently it perfectly work on prosilver and prosilver Special Edition. Other style will be probably added in future.  </p>
+<p><strong>Permissions:</strong><br>Ftp permission for customization process.  </p>
+<hr>
+<h2 id="customization-process-">Customization Process:</h2>
+<p>Follow the step for customize the menu.<br><strong>Link Customization:</strong> For add, remove, customize the menù li, you can open this file <code>(your forum root)/ext/xiradorn/xdojonavbar/styles/prosilver/template/xdojonavbar.html</code> and then add, remove or customize those lines</p>
+<pre><code>&lt;li&gt;&lt;a href=&quot;#link1&quot;&gt;&lt;i class=&quot;fa fa-home&quot;&gt;&lt;/i&gt; link1&lt;/a&gt;&lt;/li&gt;
+</code></pre><p>and change as you wish. For example i want use this link <code>http://example.com/home</code> so i can edit link in this way.</p>
+<pre><code class="lang-html">&lt;li&gt;&lt;a href=&quot;http://example.com/home&quot;&gt;&lt;i class=&quot;fa fa-home&quot;&gt;&lt;/i&gt; Home&lt;/a&gt;&lt;/li&gt;
+</code></pre>
+<p>You can also customize the near icon. Check the icon list. Click here: <a href="https://fontawesome.com/">Font-Awesome</a></p>
+<p><strong>Color Customization:</strong> for customize colors, you can open the same file said before, <code>(your forum root)/ext/xiradorn/xdojonavbar/styles/prosilver/template/xdojonavbar.html</code>. So we can change two parameters.</p>
+<ul>
+<li>Color</li>
+<li>Color tone</li>
+</ul>
+<p><strong>Color:</strong> First of all try to change the primary color to the <code>orangered</code> color. So find this slice of code</p>
+<pre><code class="lang-html">&lt;div class=&quot;xdojonav&quot; id=&quot;xdojonav&quot;&gt;
+</code></pre>
+<p>and use this class <code>xdojonav_COLORNAME</code> where COLORNAME is the web name of the color (<a href="https://en.wikipedia.org/wiki/Web_colors)">https://en.wikipedia.org/wiki/Web_colors)</a>. There are lots of them. Soon the complete list of color. So the code for this case is the follow</p>
+<pre><code class="lang-html">&lt;div class=&quot;xdojonav xdojonav_orangered&quot; id=&quot;xdojonav&quot;&gt;
+</code></pre>
+<p>That&#39;s it!!! Cool eh.  </p>
+<p><strong>Color tone:</strong> thare is so much color. But we also darken or lighten the color. For that task we can open the same file as before. For EVERY color we also have the possibility to make darker or lighter the color chosen in 25 different dark/light variation.<br><em>Darken color:</em> I suppose to change the orangered in a more dark tone of that. So find the line modified before</p>
+<pre><code class="lang-html">&lt;div class=&quot;xdojonav xdojonav_orangered&quot; id=&quot;xdojonav&quot;&gt;
+</code></pre>
+<p>So at this point i use a similar class with a number (<strong>NUM</strong>) from 1 to 25 like this <code>xdojonav_COLORNAME_NUM</code>. <strong>IMPORTANT</strong> you must use the same color as the previous class. So we can edit this line like this</p>
+<pre><code>&lt;div class=&quot;xdojonav xdojonav_orangered xdojonav_orangered_10&quot; id=&quot;xdojonav&quot;&gt;
+</code></pre><p>End!!!!  </p>
+<p><em>Lighten color:</em> Same procedure as before, just small different class. The class is that <code>xdojonav_COLORNAME_light_NUM</code>. So the line of code can be modified like that</p>
+<pre><code class="lang-html">&lt;div class=&quot;xdojonav xdojonav_orangered xdojonav_orangered_lighten_15&quot; id=&quot;xdojonav&quot;&gt;
+</code></pre>
+<p><strong>SUPER IMPORTANT:</strong> The can&#39;t darken and lighten the bar at the same time. Is uneffective!  </p>
+<hr>
+<h2 id="update-multilevel-menu-customization">Update - Multilevel Menu customization</h2>
+<p>This step is a bit more complicated, but not so much. </p>
+<h4 id="single-level-vs-multi-level-menu-structure">Single-Level vs Multi-Level Menu structure</h4>
+<p>First i want show the difference between a single line menu and a multilevel step. So the single line is just this piece of code:  </p>
+<pre><code class="lang-html">&lt;li&gt;&lt;a href=&quot;#link1&quot;&gt;&lt;i class=&quot;fa fa-home&quot;&gt;&lt;/i&gt; Link1 &lt;i class=&quot;fa fa-caret-down&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+</code></pre>
+<p>Instead a multilevel menu in build this way:</p>
+<pre><code class="lang-html">&lt;li&gt;&lt;a href=&quot;#link1&quot;&gt;&lt;i class=&quot;fa fa-home&quot;&gt;&lt;/i&gt; Link1 &lt;i class=&quot;fa fa-caret-down&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;div class=&quot;xdojonav_underhover&quot;&gt;
+        &lt;ul class=&quot;wide_under&quot;&gt;
+            &lt;li class=&quot;ext_link&quot;&gt;&lt;a href=&quot;#sublinkwide&quot;&gt;
+                &lt;h4&gt;Testo&lt;/h4&gt;&lt;img src=&quot;link&quot; alt=&quot;DB Image&quot;/&gt;
+                &lt;p&gt;Example of description for link.&lt;/p&gt;&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#sublink1&quot;&gt;
+                    &lt;h4&gt;Testo&lt;/h4&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!&lt;/p&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#sublink2&quot;&gt;
+                    &lt;h4&gt;Testo&lt;/h4&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!&lt;/p&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#sublink1&quot;&gt;
+                    &lt;h4&gt;Testo&lt;/h4&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!&lt;/p&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#sublink2&quot;&gt;
+                    &lt;h4&gt;Testo&lt;/h4&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!&lt;/p&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;div class=&quot;underhover_bottom&quot;&gt;&lt;a href=&quot;#bottomlink&quot;&gt;... just a fast link &lt;i class=&quot;fa fa-angle-double-right&quot;&gt; &lt;/i&gt;&lt;/a&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/li&gt;
+</code></pre>
+<p>Complex structure? Not so much. In this example there is all possibility for customize the second level. </p>
+<h4 id="multilevel-with-2-or-3-columns-and-wide-item">Multilevel with 2 or 3 columns and wide item</h4>
+<p>The structure is quite simple: <code>ul</code> define the column and the <code>li</code> the items inside the column. The below is a typical example of a submenu with 2 column and 2 items inside (one for col). </p>
+<pre><code class="lang-html">    &lt;div class=&quot;xdojonav_underhover&quot;&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#sublink1&quot;&gt;
+                    &lt;h4&gt;Testo&lt;/h4&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!&lt;/p&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+        &lt;ul&gt;&lt;!-- .left menu w/ 1 item --&gt;
+        &lt;/ul&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#sublink2&quot;&gt;
+                    &lt;h4&gt;Testo&lt;/h4&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!&lt;/p&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;&lt;!-- .right menu w/ 1 item --&gt;
+    &lt;/div&gt;
+</code></pre>
+<p>We also have a 3 cols menu. We can build a simila example with a 3 col menu and 3 items (one per col). For this task we can use this class <code>xdojonav_underhover_xl</code> instead of using the normal <code>xdojonav_underhover</code>.</p>
+<pre><code class="lang-html">    &lt;div class=&quot;xdojonav_underhover_xl&quot;&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#sublink1&quot;&gt;
+                    &lt;h4&gt;Testo&lt;/h4&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!&lt;/p&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;&lt;!-- .left menu w/ 1 item --&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#sublink2&quot;&gt;
+                    &lt;h4&gt;Testo&lt;/h4&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!&lt;/p&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+        &lt;ul&gt;&lt;!-- .center menu w/ 1 item --&gt;
+        &lt;/ul&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#sublink3&quot;&gt;
+                    &lt;h4&gt;Testo&lt;/h4&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!&lt;/p&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;&lt;!-- .right menu w/ 1 item --&gt;
+    &lt;/div&gt;
+</code></pre>
+<p>More simple now eh! (i hope eheheheh). So we can have also a wide item (long 2 or 3 col depends on submenu) in this way and with the help of this class <code>wide_under</code>. In this exaple we will bild a 3 item menu (1 wide + 2 normal - 1 per col). and the code is just like this</p>
+<pre><code class="lang-html">    &lt;div class=&quot;xdojonav_underhover&quot;&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#sublink1&quot;&gt;
+                    &lt;h4&gt;Testo&lt;/h4&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!&lt;/p&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+        &lt;ul&gt;&lt;!-- .wide menu w/ 1 item long 2 cols --&gt;
+
+        &lt;/ul&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#sublink2&quot;&gt;
+                    &lt;h4&gt;Testo&lt;/h4&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!&lt;/p&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;&lt;!-- .left menu w/ 1 item --&gt;
+        &lt;/ul&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#sublink2&quot;&gt;
+                    &lt;h4&gt;Testo&lt;/h4&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!&lt;/p&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;&lt;!-- .right menu w/ 1 item --&gt;
+    &lt;/div&gt;
+</code></pre>
+<h4 id="esternal-links-and-image-customize">Esternal links and Image customize</h4>
+<p>We can use a simple tricks for notify the external link or a target blank links with the help od a smarter class called <code>ext_link</code> used in li sub item in this way</p>
+<pre><code class="lang-html">        &lt;/ul&gt;
+            &lt;li class=&quot;ext_link&quot;&gt;&lt;!-- .external menu link item --&gt;
+                &lt;a href=&quot;#sublink2&quot;&gt;
+                    &lt;h4&gt;Testo&lt;/h4&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!&lt;/p&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;/ul&gt;
+            &lt;li&gt;&lt;!-- .normal menu link item --&gt;
+                &lt;a href=&quot;#sublink2&quot;&gt;
+                    &lt;h4&gt;Testo&lt;/h4&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!&lt;/p&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+</code></pre>
+<p>The icon color will auto adjust its color in case the background is darker or lighter.  </p>
+<h5 id="suggestions-and-help">Suggestions and Help</h5>
+<p>If you need help, or if you want suggest me idead/problem/bugs/New Features, may use the github system for now using issues or other built in system.</p>
+
+      </body>
+    </html>
