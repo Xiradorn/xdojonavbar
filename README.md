@@ -46,7 +46,7 @@ _Inspired form **phpbb Nav Menu** and totally rewritted from scratch in jade/sas
 * In the `ext` directory of your phpBB board, create a new directory named `xiradorn` (if it does not already exist).
 * Copy the `xdojonavbar` folder to `/ext/xiradorn/` (if done correctly, you'll have the main extension class at (your forum root)/ext/xiradorn/xdojonavbar/composer.json).
 * Navigate in the ACP to `Customise -> Manage extensions`.
-* Look for `xDojo Navbar` under the Disabled Extensions list, and click its `Enable` link.[/list]
+* Look for `xDojo Navbar` under the Disabled Extensions list, and click its `Enable` link.
 
 #### Update Instructions:  
 * disable the extension
