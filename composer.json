@@ -3,7 +3,7 @@
     "type": "phpbb-extension",
     "description": "xSensei Navigation Menu xDojo Style. Super customizable navigation menù for phpbb. Thousand color combinations and easy to config.",
     "homepage": "http://stargate.xiradorn.it/32x/",
-    "version": "2.1.0",
+    "version": "2.2.0",
     "time": "2018-03-23",
     "license": "GPL-2.0",
     "authors": [
@@ -24,8 +24,8 @@
             "phpbb/phpbb": ">=3.1.4,<3.2.0"
         },
         "version-check": {
-            "host": "xiradorn.it",
-            "directory": "/phpbb_version/xdojonavbar",
+            "host": "phpbb.xiradorn.it",
+            "directory": "/ext/xdojonavbar",
             "filename": "version_check"
         }
     }
