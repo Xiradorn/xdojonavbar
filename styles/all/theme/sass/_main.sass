@@ -37,19 +37,34 @@
 			& > a:hover, &:hover > a 
 				background-color: black
 
+			// mobile arrow buttons for mobile sublink activation
+			& > a.x_mobile_toggle
+				display: none
+				position: absolute
+				top: 0
+				right: 0
+				bottom: 0
+				width: 20px
+				padding: 10px 0px
+				text:
+					align: center
+
+				@media all and (max-width: 700px) 
+					display: block !important
+
 			& > div.xdojonav_underhover, & > div.xdojonav_underhover_xl
 				position: absolute
 				border:
 					radius: 5px
 				top: 30px
 				left: -5px
-				width: $sub_menu_item_width * 2
+				width: $sub_menu_item_width * 2 + $gap_2_col * 2
 				display: none
 				z-index: 10000
 				background: linear-gradient(gray, black)
 
 				ul
-					width: $sub_menu_item_width
+					width: $sub_menu_item_width + $gap_2_col
 					position: relative
 					float: left
 
@@ -118,8 +133,14 @@
 			& > div.xdojonav_underhover_xl					
 				width: $sub_menu_item_width * 3
 
+				ul
+					width: $sub_menu_item_width
+
 			&:hover > div.xdojonav_underhover, &:hover > div.xdojonav_underhover_xl
 				display: block
+
+				@media all and (max-width: 700px)
+					display: none
 
 		&.xdojonav_finder
 			padding: 0;
@@ -155,6 +176,9 @@
 	
 			&:hover + ul, & + ul:hover 
 				left: auto
+		
+		.x_mobile_toggle_inv
+			display: none
 
 		ul
 			position: absolute
@@ -167,6 +191,16 @@
 			li 
 				float: none
 				position: relative
+
+				& > a, 
+				& > a:link, 
+				& > a:visited 
+					padding: 
+						right: 25px
+
+				& > a.x_mobile_toggle
+					padding:
+						right: 0px
 
 				& > div.xdojonav_underhover, & > div.xdojonav_underhover_xl
 					position: absolute
@@ -181,7 +215,12 @@
 						margin: 
 							top: 0px
 						left: 0
-					
+
+				a.x_mobile_toggle:hover + div.xdojonav_underhover,
+				a.x_mobile_toggle:hover + div.xdojonav_underhover_xl, 
+				&:hover a.x_mobile_toggle + div.xdojonav_underhover, 
+				&:hover a.x_mobile_toggle + div.xdojonav_underhover_xl, 
+					display: block
 
 			&.xdojonav_finder
 				background: transparent
@@ -196,5 +235,5 @@
 				.search-box
 					display: block
 					margin:
-						top: 8px
+						top: 10px
 	
