@@ -100,7 +100,7 @@
 <pre><code class="lang-html">&lt;li&gt;&lt;a href=&quot;#link1&quot;&gt;&lt;i class=&quot;fa fa-home&quot;&gt;&lt;/i&gt; Link1 &lt;i class=&quot;fa fa-caret-down&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
 </code></pre>
 <p>Instead a multilevel menu in build this way:</p>
-<pre><code class="lang-html">&lt;li&gt;&lt;a href=&quot;#link1&quot;&gt;&lt;i class=&quot;fa fa-home&quot;&gt;&lt;/i&gt; Link1 &lt;i class=&quot;fa fa-caret-down&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+<pre><code class="lang-html">&lt;li&gt;&lt;a href=&quot;#link1&quot;&gt;&lt;i class=&quot;fa fa-home&quot;&gt;&lt;/i&gt; Link1 &lt;i class=&quot;fa fa-caret-down x_mobile_toggle_inv&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;a class=&quot;x_mobile_toggle&quot; href=&quot;#link1&quot;&gt;&lt;i class=&quot;fa fa-angle-double-right&quot;&gt;&lt;/i&gt;&lt;/a&gt;
     &lt;div class=&quot;xdojonav_underhover&quot;&gt;
         &lt;ul class=&quot;wide_under&quot;&gt;
             &lt;li class=&quot;ext_link&quot;&gt;&lt;a href=&quot;#sublinkwide&quot;&gt;
@@ -239,6 +239,11 @@
         &lt;/ul&gt;
 </code></pre>
 <p>The icon color will auto adjust its color in case the background is darker or lighter.  </p>
+<h2 id="sublink-clicable-for-submenu-opening-in-mobile">Sublink clicable for submenu opening in mobile</h2>
+<p>In mobile version we must add a sort of submenu opener button (in reality is a link) for allow to display the submenu area. It appears only into mobile version of this code. So the syntax to respet to have this funcion is the follow:  </p>
+<pre><code class="lang-html">&lt;li&gt;&lt;a href=&quot;#link1&quot;&gt;&lt;i class=&quot;fa fa-home&quot;&gt;&lt;/i&gt; Link1 &lt;i class=&quot;fa fa-caret-down x_mobile_toggle_inv&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;a class=&quot;x_mobile_toggle&quot; href=&quot;#link1&quot;&gt;&lt;i class=&quot;fa fa-angle-double-right&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+</code></pre>
+<p>Is not an automatic function and that&#39;s because is not a JS way. I also not use the particular CSS3 techniques for just a personal feelings.  </p>
 <h5 id="suggestions-and-help">Suggestions and Help</h5>
 <p>If you need help, or if you want suggest me idead/problem/bugs/New Features, may use the github system for now using issues or other built in system.</p>
 

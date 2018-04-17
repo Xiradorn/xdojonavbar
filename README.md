@@ -136,7 +136,7 @@ First i want show the difference between a single line menu and a multilevel ste
 Instead a multilevel menu in build this way:
 
 ```html
-<li><a href="#link1"><i class="fa fa-home"></i> Link1 <i class="fa fa-caret-down"></i></a>
+<li><a href="#link1"><i class="fa fa-home"></i> Link1 <i class="fa fa-caret-down x_mobile_toggle_inv"></i></a><a class="x_mobile_toggle" href="#link1"><i class="fa fa-angle-double-right"></i></a>
 	<div class="xdojonav_underhover">
 		<ul class="wide_under">
 			<li class="ext_link"><a href="#sublinkwide">
@@ -289,6 +289,15 @@ We can use a simple tricks for notify the external link or a target blank links 
 ```
 			
 The icon color will auto adjust its color in case the background is darker or lighter.  
+
+## Sublink clicable for submenu opening in mobile  
+In mobile version we must add a sort of submenu opener button (in reality is a link) for allow to display the submenu area. It appears only into mobile version of this code. So the syntax to respet to have this funcion is the follow:  
+
+```html
+<li><a href="#link1"><i class="fa fa-home"></i> Link1 <i class="fa fa-caret-down x_mobile_toggle_inv"></i></a><a class="x_mobile_toggle" href="#link1"><i class="fa fa-angle-double-right"></i></a>
+```
+
+Is not an automatic function and that's because is not a JS way. I also not use the particular CSS3 techniques for just a personal feelings.  
 
 ##### Suggestions and Help  
 If you need help, or if you want suggest me idead/problem/bugs/New Features, may use the github system for now using issues or other built in system.
