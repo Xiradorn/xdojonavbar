@@ -8,7 +8,8 @@
 	* Attualmente su none quindi nascosta
 	*/
 #search-box {
-  display: none; }
+  display: none;
+}
 
 /**!
 	* Nascondi/Visualizza la search box nella barra di navigazione
@@ -16,4 +17,5 @@
 	* Attualmente su block quindi presente
 	*/
 .xdojonav ul.xdojonav_finder {
-  display: block; }
+  display: block;
+}
