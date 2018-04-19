@@ -17,8 +17,9 @@
 					li 
 						& > a:hover, &:hover > a  
 							background: x-color('darken',map-get($color_ary, hover),$i)
-						& > a.x_mobile_toggle  
-							background: lighten(x-color('darken',map-get($color_ary, hover),$i), 5%)
+						& > a.x_mobile_toggle
+							&:hover  
+								background: lighten(x-color('darken',map-get($color_ary, hover),$i), 5%)
 						& > div.xdojonav_underhover, & > div.xdojonav_underhover_xl
 							//- background: x-color('darken',map-get($color_ary, hover),$i)
 							background: linear-gradient( x-color('darken',map-get($color_ary, hover),$i), x-color('darken',map-get($color_ary, bottom),$i) )
@@ -33,8 +34,9 @@
 					li 
 						& > a:hover 
 							background: x-color('lighten',map-get($color_ary, hover),$i)
-						& > a.x_mobile_toggle  
-							background: lighten(x-color('lighten',map-get($color_ary, hover),$i), 5%)
+						& > a.x_mobile_toggle
+							&:hover  
+								background: lighten(x-color('lighten',map-get($color_ary, hover),$i), 5%)
 						& > div.xdojonav_underhover,& > div.xdojonav_underhover_xl
 							//- background: x-color('lighten',map-get($color_ary, hover),$i)
 							background: linear-gradient( x-color('lighten',map-get($color_ary, hover),$i), x-color('lighten',map-get($color_ary, bottom),$i) )
@@ -50,8 +52,9 @@
 						color: #000000
 				& > a:hover, &:hover > a 
 					background: map-get($color_ary, hover)
-				& > a.x_mobile_toggle  
-					background: lighten(map-get($color_ary, hover), 5%)
+				& > a.x_mobile_toggle
+					&:hover   
+						background: lighten(map-get($color_ary, hover), 5%)
 				& > div.xdojonav_underhover, & > div.xdojonav_underhover_xl
 					//- background: map-get($color_ary, hover)
 					background: linear-gradient( map-get($color_ary, hover), map-get($color_ary, bottom) )

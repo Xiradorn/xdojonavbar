@@ -34,7 +34,7 @@
 				color: white
 			
 			& > a:hover, &:hover > a 
-				background-color: black
+				background-color: transparent
 
 			// mobile arrow buttons for mobile sublink activation
 			& > a.x_mobile_toggle
@@ -61,7 +61,7 @@
 				//display: none
 				opacity: 0
 				z-index: 10000
-				background: linear-gradient(gray, black)
+				//background: linear-gradient(gray, black)
 
 				ul
 					width: $sub_menu_item_width + $gap_2_col
@@ -208,6 +208,7 @@
 						right: 0px
 
 				& > div.xdojonav_underhover, & > div.xdojonav_underhover_xl
+					display: none
 					position: absolute
 					top: 0px
 					left: 100% !important
@@ -220,11 +221,14 @@
 						margin: 
 							top: 0px
 						left: 0
+				
+				&:hover > div.xdojonav_underhover, &:hover > div.xdojonav_underhover_xl
+					display: none
 
-				a.x_mobile_toggle:hover + div.xdojonav_underhover,
-				a.x_mobile_toggle:hover + div.xdojonav_underhover_xl, 
-				&:hover a.x_mobile_toggle + div.xdojonav_underhover, 
-				&:hover a.x_mobile_toggle + div.xdojonav_underhover_xl, 
+				&:hover > a.x_mobile_toggle + div.xdojonav_underhover:hover, 
+				&:hover > a.x_mobile_toggle + div.xdojonav_underhover_xl:hover, 
+				& > a.x_mobile_toggle:hover + div.xdojonav_underhover,
+				& > a.x_mobile_toggle:hover + div.xdojonav_underhover_xl, 
 					display: block
 
 			&.xdojonav_finder
