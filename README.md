@@ -1,5 +1,5 @@
 # xSensei - xDojo Navbar
-#### Extension Version: 2.2.0  
+#### Extension Version: 2.3.0  
 
 _**Desktop Version**_  
 ![screen1](contrib/screen.jpg "screen1") 
@@ -35,6 +35,7 @@ _Inspired form **phpbb Nav Menu** and totally rewritted from scratch in jade/sas
 * Ext links notification with class used in single li sub element (`li.ext_link`)
 * Image on rightside (suggested for only wide element)
 * Footer submenu element link on bottom
+* Fade CSS efx
 
 **For Developers:**  
 * written in JADE (PUG) and SASS
