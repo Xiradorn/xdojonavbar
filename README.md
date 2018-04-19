@@ -35,7 +35,7 @@ _Inspired form **phpbb Nav Menu** and totally rewritted from scratch in jade/sas
 * Ext links notification with class used in single li sub element (`li.ext_link`)
 * Image on rightside (suggested for only wide element)
 * Footer submenu element link on bottom
-* Fade CSS efx
+* Fade CSS efx with config value
 
 **For Developers:**  
 * written in JADE (PUG) and SASS
