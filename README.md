@@ -100,14 +100,14 @@ and use this class `xdojonav_COLORNAME` where COLORNAME is the web name of the c
 
 That's it!!! Cool eh.  
 
-**Color tone:** thare is so much color. But we also darken or lighten the color. For that task we can open the same file as before. For EVERY color we also have the possibility to make darker or lighter the color chosen in 25 different dark/light variation.  
+**Color tone:** thare is so much color. But we also darken or lighten the color. For that task we can open the same file as before. For EVERY color we also have the possibility to make darker or lighter the color chosen in 20 different dark/light variation.  
 _Darken color:_ I suppose to change the orangered in a more dark tone of that. So find the line modified before
 
 ```html
 <div class="xdojonav xdojonav_orangered" id="xdojonav">
 ```
 
-So at this point i use a similar class with a number (**NUM**) from 1 to 25 like this `xdojonav_COLORNAME_NUM`. **IMPORTANT** you must use the same color as the previous class. So we can edit this line like this
+So at this point i use a similar class with a number (**NUM**) from 1 to 20 like this `xdojonav_COLORNAME_NUM`. **IMPORTANT** you must use the same color as the previous class. So we can edit this line like this
 
 ```html
 <div class="xdojonav xdojonav_orangered xdojonav_orangered_10" id="xdojonav">
