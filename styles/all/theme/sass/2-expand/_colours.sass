@@ -1,137 +1,142 @@
-//- instanciate vars for coloring stuff process
-@each $colors_allowed_item in $colors_allowed_list
-	$color_ary: coloring_composition_ary($colors_allowed_item)
+// checkmode for developing purposes
+@if ( map-get($configurator, 'auto_style_color_activator') == 'both' or map-get($configurator, 'auto_style_color_activator') == 'colors' )
+	//- instanciate vars for coloring stuff process
+	@each $colors_allowed_item in $colors_allowed_list
+		$color_ary: coloring_composition_ary($colors_allowed_item)
 
-	$xdojonav: 'xdojonav'
-	
-	@if $colors_allowed_item != #105289
-		$xdojonav: 'xdojonav_' + quote(#{$colors_allowed_item})
-
-	.#{$xdojonav}
-		background: linear-gradient( map-get($color_ary, top), map-get($color_ary, bottom) )
+		$xdojonav: 'xdojonav'
 		
-		@for $i from 1 through $color_levels_variations
-			&.#{$xdojonav}_#{$i}
-				background: linear-gradient( x-color('darken',map-get($color_ary, top),$i), x-color('darken',map-get($color_ary, bottom),$i) )
-				ul 
-					li 
-						& > a:hover, &:hover > a  
-							background: x-color('darken',map-get($color_ary, hover),$i)
-						& > a.x_mobile_toggle
-							&:hover  
-								background: lighten(x-color('darken',map-get($color_ary, hover),$i), 5%)
-						& > div.xdojonav_underhover, & > div.xdojonav_underhover_xl
-							//- background: x-color('darken',map-get($color_ary, hover),$i)
-							background: linear-gradient( x-color('darken',map-get($color_ary, hover),$i), x-color('darken',map-get($color_ary, bottom),$i) )
-							box-shadow: 0 2px 2px darken(map-get($color_ary, top), 20%)
-							ul
-								li:hover, li > a:hover
-									background: x-color('darken',map-get($color_ary, subhover),$i)
+		@if $colors_allowed_item != #105289
+			$xdojonav: 'xdojonav_' + quote(#{$colors_allowed_item})
 
-			&.#{$xdojonav}_light_#{$i}
-				background: linear-gradient( x-color('lighten',map-get($color_ary, top),$i), x-color('lighten',map-get($color_ary, bottom),$i) )
-				ul 
-					li 
-						& > a:hover 
-							background: x-color('lighten',map-get($color_ary, hover),$i)
-						& > a.x_mobile_toggle
-							&:hover  
-								background: lighten(x-color('lighten',map-get($color_ary, hover),$i), 5%)
-						& > div.xdojonav_underhover,& > div.xdojonav_underhover_xl
-							//- background: x-color('lighten',map-get($color_ary, hover),$i)
-							background: linear-gradient( x-color('lighten',map-get($color_ary, hover),$i), x-color('lighten',map-get($color_ary, bottom),$i) )
-							box-shadow: 0 2px 2px darken(map-get($color_ary, top), 20%)
-							ul
-								li:hover, li > a:hover
-									background: x-color('lighten',map-get($color_ary, subhover),$i)
-		
-		ul 
-			li 
-				@if hue( $colors_allowed_item ) > 40 and hue( $colors_allowed_item ) < 180
-					& > a, & > a:visited, & > a:link
-						color: #000000
-				& > a:hover, &:hover > a 
-					background: map-get($color_ary, hover)
-				& > a.x_mobile_toggle
-					&:hover   
-						background: lighten(map-get($color_ary, hover), 5%)
-				& > div.xdojonav_underhover, & > div.xdojonav_underhover_xl
-					//- background: map-get($color_ary, hover)
-					background: linear-gradient( map-get($color_ary, hover), map-get($color_ary, bottom) )
-					box-shadow: 0 2px 2px darken(map-get($color_ary, top), 20%)
-					ul
-						li
-							&:hover, & > a:hover
-								background: map-get($color_ary, subhover)
-							&.ext_link
-								& > a, 
-								& > a:link, 
-								& > a:visited 
-									@if hue( $colors_allowed_item ) > 40 and hue( $colors_allowed_item ) < 180
-										background:
-											image: url( map-get($external_img, dark) )
-									@else
-										background:
-											image: url( map-get($external_img, light) )
-					.underhover_bottom
-						@if hue( $colors_allowed_item ) > 40 and hue( $colors_allowed_item ) < 180
-							a, a:link, a:visited
-								color: #000000
-		.search-header
-			box-shadow: 0 0 4px darken(map-get($color_ary, top), 20%)
-
-			.button-search, .button-search-end
-				& i
-					color: map-get($color_ary, top) !important
-				&:hover i
-					color: map-get($color_ary, bottom) !important
-
-	/* media queries */
-	@media all and (max-width: 700px) 
 		.#{$xdojonav}
-			@for $i from 1 through $color_levels_variations
-				&.#{$xdojonav}_#{$i}
-					.xhamburger
-						background: x-color('darken',map-get($color_ary, hover),$i)
-				&.#{$xdojonav}_light_#{$i}
-					.xhamburger
-						background: x-color('lighten',map-get($color_ary, hover),$i)		
-			.xhamburger
-				background: map-get($color_ary, hover)
-		
-		.#{$xdojonav}
+			background: linear-gradient( map-get($color_ary, top), map-get($color_ary, bottom) )
+			
+			@if ( map-get($configurator, 'color_levels_variations') >= 1 )
+				@for $i from 1 through map-get($configurator, 'color_levels_variations')
+					&.#{$xdojonav}_#{$i}
+						background: linear-gradient( x-color('darken',map-get($color_ary, top),$i), x-color('darken',map-get($color_ary, bottom),$i) )
+						ul 
+							li 
+								& > a:hover, &:hover > a  
+									background: x-color('darken',map-get($color_ary, hover),$i)
+								& > a.x_mobile_toggle
+									&:hover  
+										background: lighten(x-color('darken',map-get($color_ary, hover),$i), 5%)
+								& > div.xdojonav_underhover, & > div.xdojonav_underhover_xl
+									//- background: x-color('darken',map-get($color_ary, hover),$i)
+									background: linear-gradient( x-color('darken',map-get($color_ary, hover),$i), x-color('darken',map-get($color_ary, bottom),$i) )
+									box-shadow: 0 2px 2px darken(map-get($color_ary, top), 20%)
+									ul
+										li:hover, li > a:hover
+											background: x-color('darken',map-get($color_ary, subhover),$i)
+
+					&.#{$xdojonav}_light_#{$i}
+						background: linear-gradient( x-color('lighten',map-get($color_ary, top),$i), x-color('lighten',map-get($color_ary, bottom),$i) )
+						ul 
+							li 
+								& > a:hover 
+									background: x-color('lighten',map-get($color_ary, hover),$i)
+								& > a.x_mobile_toggle
+									&:hover  
+										background: lighten(x-color('lighten',map-get($color_ary, hover),$i), 5%)
+								& > div.xdojonav_underhover,& > div.xdojonav_underhover_xl
+									//- background: x-color('lighten',map-get($color_ary, hover),$i)
+									background: linear-gradient( x-color('lighten',map-get($color_ary, hover),$i), x-color('lighten',map-get($color_ary, bottom),$i) )
+									box-shadow: 0 2px 2px darken(map-get($color_ary, top), 20%)
+									ul
+										li:hover, li > a:hover
+											background: x-color('lighten',map-get($color_ary, subhover),$i)
+			
 			ul 
-				background: map-get($color_ary, hover)
-				box-shadow: none
-				li
+				li 
+					@if hue( $colors_allowed_item ) > 40 and hue( $colors_allowed_item ) < 180
+						& > a, & > a:visited, & > a:link
+							color: #000000
+					& > a:hover, &:hover > a 
+						background: map-get($color_ary, hover)
+					& > a.x_mobile_toggle
+						&:hover   
+							background: lighten(map-get($color_ary, hover), 5%)
 					& > div.xdojonav_underhover, & > div.xdojonav_underhover_xl
-						box-shadow: none
+						//- background: map-get($color_ary, hover)
+						background: linear-gradient( map-get($color_ary, hover), map-get($color_ary, bottom) )
+						box-shadow: 0 2px 2px darken(map-get($color_ary, top), 20%)
 						ul
-							background: map-get($color_ary, hover)
-							box-shadow: none
+							li
+								&:hover, & > a:hover
+									background: map-get($color_ary, subhover)
+								&.ext_link
+									& > a, 
+									& > a:link, 
+									& > a:visited 
+										@if hue( $colors_allowed_item ) > 40 and hue( $colors_allowed_item ) < 180
+											background:
+												image: url( map-get($external_img, dark) )
+										@else
+											background:
+												image: url( map-get($external_img, light) )
 						.underhover_bottom
-							background: map-get($color_ary, hover)
+							@if hue( $colors_allowed_item ) > 40 and hue( $colors_allowed_item ) < 180
+								a, a:link, a:visited
+									color: #000000
+			.search-header
+				box-shadow: 0 0 4px darken(map-get($color_ary, top), 20%)
 
-				&.xdojonav_finder
-					box-shadow: none !important
-					background:
-						color: transparent !important
+				.button-search, .button-search-end
+					& i
+						color: map-get($color_ary, top) !important
+					&:hover i
+						color: map-get($color_ary, bottom) !important
 
-			@for $i from 1 through $color_levels_variations
-				&.#{$xdojonav}_#{$i}
-					ul
-						background: x-color('darken',map-get($color_ary, top),$i)
-						li
-							& > div.xdojonav_underhover, & > div.xdojonav_underhover_xl
+		/* media queries */
+		@media all and (max-width: 700px) 
+			.#{$xdojonav}
+				@if ( map-get($configurator, 'color_levels_variations') >= 1 )
+					@for $i from 1 through map-get($configurator, 'color_levels_variations')
+						&.#{$xdojonav}_#{$i}
+							.xhamburger
+								background: x-color('darken',map-get($color_ary, hover),$i)
+						&.#{$xdojonav}_light_#{$i}
+							.xhamburger
+								background: x-color('lighten',map-get($color_ary, hover),$i)		
+				.xhamburger
+					background: map-get($color_ary, hover)
+			
+			.#{$xdojonav}
+				ul 
+					background: map-get($color_ary, hover)
+					box-shadow: none
+					li
+						& > div.xdojonav_underhover, & > div.xdojonav_underhover_xl
+							box-shadow: none
+							ul
+								background: map-get($color_ary, hover)
+								box-shadow: none
+							.underhover_bottom
+								background: map-get($color_ary, hover)
+
+					&.xdojonav_finder
+						box-shadow: none !important
+						background:
+							color: transparent !important
+
+				@if ( map-get($configurator, 'color_levels_variations') >= 1 )
+					@for $i from 1 through map-get($configurator, 'color_levels_variations')
+						&.#{$xdojonav}_#{$i}
+							ul
 								background: x-color('darken',map-get($color_ary, top),$i)
-								.underhover_bottom
-									background: x-color('darken',map-get($color_ary, hover),$i)
+								li
+									& > div.xdojonav_underhover, & > div.xdojonav_underhover_xl
+										background: x-color('darken',map-get($color_ary, top),$i)
+										.underhover_bottom
+											background: x-color('darken',map-get($color_ary, hover),$i)
 
-				&.#{$xdojonav}_light_#{$i}
-					ul
-						background: x-color('lighten',map-get($color_ary, top),$i)
-						li
-							& > div.xdojonav_underhover, & > div.xdojonav_underhover_xl
+						&.#{$xdojonav}_light_#{$i}
+							ul
 								background: x-color('lighten',map-get($color_ary, top),$i)
-								.underhover_bottom
-									background: x-color('darken',map-get($color_ary, hover),$i)
+								li
+									& > div.xdojonav_underhover, & > div.xdojonav_underhover_xl
+										background: x-color('lighten',map-get($color_ary, top),$i)
+										.underhover_bottom
+											background: x-color('darken',map-get($color_ary, hover),$i)

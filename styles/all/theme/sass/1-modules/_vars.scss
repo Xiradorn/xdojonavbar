@@ -9,30 +9,39 @@ $external_img: (
 );
 $gap_2_col: 30px;
 
-//- Colors Variables
+//- Colors Variables instanciation
 $reddish_color_ary: (red);
 $bluish_color_ary: (blue);
 $greenish_color_ary: (green);
 $graysh_color_ary: (gray);
-@if ($minimal_colors == 'minimal') {
+$custom_ary_color_dev: ();
+$colors_allowed_list: ();
+
+@if ( map-get($configurator, 'minimal_colors') == 'minimal' ) {
 	$reddish_color_ary: (red, orangered, orange, yellow);
 	$bluish_color_ary: (indigo, purple, blue, navy);
 	$greenish_color_ary: (green, forestgreen, lime, limegreen);
 	$graysh_color_ary: (gray, dimgray, slategray, darkslategray, black);
 }
-@else if ($minimal_colors == 'full') {
+@else if ( map-get($configurator, 'minimal_colors') == 'full' ) {
 	$reddish_color_ary: (darkred, red, orangered, orange, darkorange, pink, firebrick, crimson, hotpink, mediumvioletred, yellow, khaki, gold, goldenrod, brown, maroon);
 	$bluish_color_ary: (indigo, purple, fuchsia, blue, navy, lightsteelblue, royalblue, blue, navy, cyan, teal, midnightblue, darkslateblue, darkmagenta, darkviolet, blueviolet);
 	$greenish_color_ary: (green, forestgreen, lime, olive, yellowgreen, limegreen, springgreen, seagreen, darkgreen, darkolivegreen,olivedrab, palegreen, chartreuse);
 	$graysh_color_ary: (gray, dimgray, lightslategray, slategray, darkslategray, black, silver, gainsboro);
+} @else if ( map-get($configurator, 'minimal_colors') == 'custom' ) {
+	$custom_ary_color_dev: map-get($configurator, 'custom_ary_color');
 }
 
 //- Join lists
-$rblist: join($reddish_color_ary, $bluish_color_ary);
-$gglist: join($greenish_color_ary, $graysh_color_ary);
-$rgb_list: join($rblist, $gglist);
+@if ( map-get($configurator, 'minimal_colors') == 'custom' ) {
+	$colors_allowed_list: $custom_ary_color_dev;
+} @else {
+	$rblist: join($reddish_color_ary, $bluish_color_ary);
+	$gglist: join($greenish_color_ary, $graysh_color_ary);
+	$rgb_list: join($rblist, $gglist);
 
-$colors_allowed_list: join($primary, $rgb_list);
+	$colors_allowed_list: join($primary, $rgb_list);
+}
 
 $styles_color: ( 
 	prosilver: ( 
