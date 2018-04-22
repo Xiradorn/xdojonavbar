@@ -1,5 +1,5 @@
 # xSensei - xDojo Navbar
-#### Extension Version: 2.4.0  
+#### Extension Version: 2.5.0  
 
 _**Desktop Version**_  
 ![screen1](contrib/screen.jpg "screen1") 
@@ -39,7 +39,8 @@ _Inspired form **phpbb Nav Menu** and totally rewritted from scratch in jade/sas
 
 **For Developers:**  
 * written in JADE (PUG) and SASS
-* thare is a config var for develop a super lightweight version of css. 
+* thare is a config var for develop a super lightweight version of css.
+* configurator ary for better developing steps 
 
 #### Installation:  
 * Download the latest release from (https://github.com/XiradornLab/phpbb_ext_xdojonavbar/releases).
