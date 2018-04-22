@@ -1,5 +1,5 @@
 // checkmode for developing purposes
-@if ( ( map-get($configurator, 'auto_style_color_activator') != 'both' and map-get($configurator, 'auto_style_color_activator') != 'colors' ) or map-get($configurator, 'auto_style_color_activator') == 'auto' )
+@if ( map-get($configurator, 'auto_style_color_activator') != 'colors' or map-get($configurator, 'auto_style_color_activator') == 'both' )
 	//- instanciate vars for coloring with stylename
 	@each $style_color_name, $style_color_data_ary in $styles_color
 		$color_ary: coloring_styles_composition_ary($style_color_data_ary, key)
