@@ -13,17 +13,17 @@
 				li 
 					& > a:hover, &:hover > a 
 						background: map-get($color_ary, hover)
-					& > a.x_mobile_toggle
+					& > a.xen_mobile_toggle
 						&:hover   
 							background: lighten(map-get($color_ary, hover), 5%)
-					& > div.xdojonav_underhover, & > div.xdojonav_underhover_xl
+					& > div.xen_sub, & > div.xen_sub_xl
 						background: linear-gradient( map-get($color_ary, hover), map-get($color_ary, bottom) )
 						box-shadow: 0 2px 2px darken(map-get($color_ary, top), 20%)
 						ul
 							li
 								&:hover, & > a:hover
 									background: map-get($color_ary, subhover)
-								&.ext_link
+								&.xen_ext_link
 									& > a, 
 									& > a:link, 
 									& > a:visited 
@@ -42,7 +42,7 @@
 		/* media queries */
 		@media all and (max-width: 700px) 
 			.#{$xdojonav}_#{$style_color_name}
-				.xhamburger
+				.xen_menu_mobile
 					background: map-get($color_ary, hover)
 			
 			.#{$xdojonav}_#{$style_color_name}
@@ -50,14 +50,14 @@
 					background: map-get($color_ary, top)
 					box-shadow: none
 					li
-						& > div.xdojonav_underhover, & > div.xdojonav_underhover_xl
+						& > div.xen_sub, & > div.xen_sub_xl
 							box-shadow: none
 							ul
 								background: map-get($color_ary, hover)
 								box-shadow: none
-							.underhover_bottom
+							.xen_sub_footer
 								background: map-get($color_ary, hover)
 
-					&.xdojonav_finder
+					&.xen_finder
 						box-shadow: none !important
 						background: transparent !important

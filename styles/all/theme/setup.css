@@ -7,7 +7,7 @@
  * rimpiazza la linea transition: opacity 200ms ease-in-out
  * con transition: none !important;
  */
-.xdojonav ul li > div.xdojonav_underhover, .xdojonav ul li > div.xdojonav_underhover_xl {
+.xdnav ul li > div.xdnav_sub, .xdnav ul li > div.xdnav_sub_xl {
   -webkit-transition: opacity 200ms ease-in-out;
   -o-transition: opacity 200ms ease-in-out;
   transition: opacity 200ms ease-in-out;
@@ -27,6 +27,6 @@
  * Basterà cambiare block con none per farla apparire
  * Attualmente su block quindi presente
  */
-.xdojonav ul.xdojonav_finder {
+.xdnav ul.xdnav_finder {
   display: block;
 }

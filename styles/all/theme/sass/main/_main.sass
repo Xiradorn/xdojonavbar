@@ -4,7 +4,7 @@
 	border:
 		radius: 7px 7px 0px 0px
 
-.xdojonav 
+.xen 
 	margin:
 		bottom: 5px
 	border:
@@ -37,7 +37,7 @@
 				background-color: transparent
 
 			// mobile arrow buttons for mobile sublink activation
-			& > a.x_mobile_toggle
+			& > a.xen_mobile_toggle
 				display: none
 				position: absolute
 				top: 0
@@ -51,7 +51,7 @@
 				@media all and (max-width: 700px) 
 					display: block !important
 
-			& > div.xdojonav_underhover, & > div.xdojonav_underhover_xl
+			& > div.xen_sub, & > div.xen_sub_xl
 				position: absolute
 				border:
 					radius: 5px
@@ -73,7 +73,7 @@
 						float: none
 						height: auto
 
-						&.ext_link
+						&.xen_ext_link
 							& > a, 
 							& > a:link, 
 							& > a:visited 
@@ -104,10 +104,10 @@
 							@media all and (max-width: 700px)
 								display: none
 				
-					&.wide_under
+					&.xen_wide_row
 						width: 100%
 
-				.underhover_bottom
+				.xen_sub_footer
 					text:
 						align: right
 					padding: 5px 15px
@@ -130,13 +130,13 @@
 						text:
 							decoration: underline
 
-			& > div.xdojonav_underhover_xl					
+			& > div.xen_sub_xl					
 				width: $sub_menu_item_width * 3
 
 				ul
 					width: $sub_menu_item_width
 
-			&:hover > div.xdojonav_underhover, &:hover > div.xdojonav_underhover_xl
+			&:hover > div.xen_sub, &:hover > div.xen_sub_xl
 				// display: block
 				left: -5px
 				opacity: 1
@@ -144,7 +144,7 @@
 				@media all and (max-width: 700px)
 					display: none
 
-		&.xdojonav_finder
+		&.xen_finder
 			padding: 0;
 			float: right;
 
@@ -152,7 +152,7 @@
 				margin: 
 					top: 6px
 
-	.xhamburger 
+	.xen_menu_mobile 
 		display: none
 
 /*
@@ -163,7 +163,7 @@
 	.headerbar 
 		border-radius: 0	
 
-	.xdojonav 
+	.xen 
 		margin:
 			left: -5px !important
 			right: -5px !important
@@ -171,7 +171,7 @@
 			radius: 0
 		padding: 0px
 		
-		.xhamburger 
+		.xen_menu_mobile 
 			display: block
 			padding: 12px 20px
 			color: white
@@ -182,7 +182,7 @@
 			&:hover + ul, & + ul:hover 
 				left: auto
 		
-		.x_mobile_toggle_inv
+		.xen_mobile_toggle_inv
 			display: none
 
 		ul
@@ -203,11 +203,11 @@
 					padding: 
 						right: 25px
 
-				& > a.x_mobile_toggle
+				& > a.xen_mobile_toggle
 					padding:
 						right: 0px
 
-				& > div.xdojonav_underhover, & > div.xdojonav_underhover_xl
+				& > div.xen_sub, & > div.xen_sub_xl
 					display: none
 					position: absolute
 					top: 0px
@@ -222,16 +222,16 @@
 							top: 0px
 						left: 0
 				
-				&:hover > div.xdojonav_underhover, &:hover > div.xdojonav_underhover_xl
+				&:hover > div.xen_sub, &:hover > div.xen_sub_xl
 					display: none
 
-				&:hover > a.x_mobile_toggle + div.xdojonav_underhover:hover, 
-				&:hover > a.x_mobile_toggle + div.xdojonav_underhover_xl:hover, 
-				& > a.x_mobile_toggle:hover + div.xdojonav_underhover,
-				& > a.x_mobile_toggle:hover + div.xdojonav_underhover_xl, 
+				&:hover > a.xen_mobile_toggle + div.xen_sub:hover, 
+				&:hover > a.xen_mobile_toggle + div.xen_sub_xl:hover, 
+				& > a.xen_mobile_toggle:hover + div.xen_sub,
+				& > a.xen_mobile_toggle:hover + div.xen_sub_xl, 
 					display: block
 
-			&.xdojonav_finder
+			&.xen_finder
 				background: transparent
 				left: auto
 				right: 0
