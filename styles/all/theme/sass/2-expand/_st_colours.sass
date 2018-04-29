@@ -4,7 +4,7 @@
 	@each $style_color_name, $style_color_data_ary in $styles_color
 		$color_ary: coloring_styles_composition_ary($style_color_data_ary, key)
 
-		$xdojonav: 'xdojonav'
+		$xdojonav: 'xen'
 
 		.#{$xdojonav}_#{$style_color_name}
 			background: map-get($style_color_data_ary, grad)

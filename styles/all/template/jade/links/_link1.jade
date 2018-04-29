@@ -1,12 +1,12 @@
 a(href="#link1")
     i.fa.fa-home
     |  Link1 
-    i.fa.fa-caret-down.xen_mobile_toggle_inv
+    i.xen_dropdown
 a(href="#").xen_mobile_toggle
-    i.fa.fa-chevron-right
+    i.xen_dropright
 .xen_sub
-    ul.xen_wide_row
-        li.xen_ext_link
+    ul.xen_wide
+        li
             a(href="#sublinkwide")
                 h4 Testo
                 img(src=exampleImgSrc2, alt="DB Image", style="max-width:40px")
@@ -16,12 +16,12 @@ a(href="#").xen_mobile_toggle
             a(href="#sublink1")
                 h4 Testo
                 p #{txtVarS}
-        li
+        li.xen_ext_link
             a(href="#sublink2")
                 h4 Testo
                 p #{txtVarS}
     ul
-        li
+        li.xen_ext_link
             a(href="#sublink1")
                 h4 Testo
                 p #{txtVarS}
@@ -31,4 +31,4 @@ a(href="#").xen_mobile_toggle
                 p #{txtVarS}
     .xen_sub_footer
         a(href="#bottomlink") ... just a fast link 
-            i.fa.fa-angle-double-right
+            i.xen_sub_foot_icon

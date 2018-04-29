@@ -1,4 +1,4 @@
-/* some stuff */
+// some stuff
 .xen, .xen_sub, .xen_sub_xl, .xen_sub_footer
 	&::after, &::before 
 		content: " "
@@ -10,3 +10,16 @@
 
 .xen_sub, .xen_sub_xl
 	overflow: hidden
+
+// icons supporting stuff
+.xen_dropdown, .xen_dropright, .xen_sub_foot_icon
+	@extend %xen_fa_icons
+
+.xen_dropdown::before
+	content: "\f0d7"
+
+.xen_dropright::before
+	content: "\f054"
+
+.xen_sub_foot_icon::before
+	content: "\f101"

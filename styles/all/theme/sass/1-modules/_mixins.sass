@@ -12,3 +12,29 @@
 @function coloring_styles_composition_ary($ary_style_item_color, $key)
 	@return ( top: map-get($ary_style_item_color, $key), bottom: darken(map-get($ary_style_item_color, $key), 5%), hover: darken(map-get($ary_style_item_color, $key), 15%), subhover: darken(map-get($ary_style_item_color, $key), 2%) )
 
+
+=navbar_coloring_type_rendering($mode: 'darken')
+	background: linear-gradient( x-color($mode,map-get($color_ary, top),$i), x-color($mode,map-get($color_ary, bottom),$i) )
+	ul 
+		li 
+			& > a:hover, &:hover > a  
+				background: x-color($mode,map-get($color_ary, hover),$i)
+			& > a.xen_mobile_toggle
+				&:hover  
+					background: lighten(x-color($mode,map-get($color_ary, hover),$i), 5%)
+			& > div.xen_sub, & > div.xen_sub_xl
+				//- background: x-color($mode,map-get($color_ary, hover),$i)
+				background: linear-gradient( x-color($mode,map-get($color_ary, hover),$i), x-color($mode,map-get($color_ary, bottom),$i) )
+				box-shadow: 0 2px 2px darken(map-get($color_ary, top), 20%)
+				ul
+					li:hover, li > a:hover
+						background: x-color($mode,map-get($color_ary, subhover),$i)
+
+=navbar_coloring_type_rendering_mobile($mode: 'darken')
+	ul
+	background: x-color('darken',map-get($color_ary, top),$i)
+	li
+		& > div.xen_sub, & > div.xen_sub_xl
+			background: x-color($mode,map-get($color_ary, top),$i)
+			.xen_sub_footer
+				background: x-color($mode,map-get($color_ary, hover),$i)
