@@ -13,7 +13,7 @@
 	@return ( top: map-get($ary_style_item_color, $key), bottom: darken(map-get($ary_style_item_color, $key), 5%), hover: darken(map-get($ary_style_item_color, $key), 15%), subhover: darken(map-get($ary_style_item_color, $key), 2%) )
 
 
-=navbar_coloring_type_rendering($mode: 'darken')
+=navbar_coloring_type_rendering($mode, $color_ary, $i)
 	background: linear-gradient( x-color($mode,map-get($color_ary, top),$i), x-color($mode,map-get($color_ary, bottom),$i) )
 	ul 
 		li 
@@ -30,7 +30,7 @@
 					li:hover, li > a:hover
 						background: x-color($mode,map-get($color_ary, subhover),$i)
 
-=navbar_coloring_type_rendering_mobile($mode: 'darken')
+=navbar_coloring_type_rendering_mobile($mode, $color_ary, $i)
 	ul
 	background: x-color('darken',map-get($color_ary, top),$i)
 	li

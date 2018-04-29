@@ -30,9 +30,9 @@ _Inspired form **phpbb Nav Menu** and totally rewritted from scratch in jade/sas
 * CSS minified for super speed load
 * Single-level or Multi-Level support
 * Auto coloring style for default phpbb style. _Now compatible with: **Prosilver, Prosilver SE**_ 
-* Multi level with 2 or 3 columns (2 cols = `xdojonav_underhover` | 3 cols = `xdojonav_underhover_xl`)
-* Full width element in submenu width class (`ul.wide_under`)
-* Ext links notification with class used in single li sub element (`li.ext_link`)
+* Multi level with 2 or 3 columns (2 cols = `xen_sub` | 3 cols = `xen_sub_xl`)
+* Full width element in submenu width class (`ul.xen_wide`)
+* Ext links notification with class used in single li sub element (`li.xen_ext_link`)
 * Image on rightside (suggested for only wide element)
 * Footer submenu element link on bottom
 * Fade CSS efx with config value
@@ -89,13 +89,13 @@ You can also customize the near icon. Check the icon list. Click here: [Font-Awe
 **Color:** First of all try to change the primary color to the `orangered` color. So find this slice of code
 
 ```html
-<div class="xdojonav" id="xdojonav">
+<div class="xen xen_{{ T_TEMPLATE_NAME }}" id="xen">
 ```
 
-and use this class `xdojonav_COLORNAME` where COLORNAME is the web name of the color (https://en.wikipedia.org/wiki/Web_colors). There are lots of them. Soon the complete list of color. So the code for this case is the follow
+and use this class `xen_COLORNAME` where COLORNAME is the web name of the color (https://en.wikipedia.org/wiki/Web_colors). There are lots of them. Soon the complete list of color. So the code for this case is the follow
 
 ```html
-<div class="xdojonav xdojonav_orangered" id="xdojonav">
+<div class="xen xen_orangered" id="xen">
 ```
 
 That's it!!! Cool eh.  
@@ -104,13 +104,13 @@ That's it!!! Cool eh.
 _Darken color:_ I suppose to change the orangered in a more dark tone of that. So find the line modified before
 
 ```html
-<div class="xdojonav xdojonav_orangered" id="xdojonav">
+<div class="xen xen_orangered" id="xen">
 ```
 
 So at this point i use a similar class with a number (**NUM**) from 1 to 20 like this `xdojonav_COLORNAME_NUM`. **IMPORTANT** you must use the same color as the previous class. So we can edit this line like this
 
 ```html
-<div class="xdojonav xdojonav_orangered xdojonav_orangered_10" id="xdojonav">
+<div class="xen xen_orangered xen_orangered_10" id="xen">
 ```
 
 End!!!!  
@@ -118,7 +118,7 @@ End!!!!
 _Lighten color:_ Same procedure as before, just small different class. The class is that `xdojonav_COLORNAME_light_NUM`. So the line of code can be modified like that
 
 ```html
-<div class="xdojonav xdojonav_orangered xdojonav_orangered_lighten_15" id="xdojonav">
+<div class="xen xen_orangered xen_orangered_lt_15" id="xen">
 ```
 
 **SUPER IMPORTANT:** The can't darken and lighten the bar at the same time. Is uneffective!  
@@ -132,31 +132,20 @@ This step is a bit more complicated, but not so much.
 First i want show the difference between a single line menu and a multilevel step. So the single line is just this piece of code:  
 
 ```html
-<li><a href="#link1"><i class="fa fa-home"></i> Link1 <i class="fa fa-caret-down"></i></a></li>
+<li><a href="#link1"><i class="fa fa-home"></i> Link1</a></li>
 ```
 
 Instead a multilevel menu in build this way:
 
 ```html
-<li><a href="#link1"><i class="fa fa-home"></i> Link1 <i class="fa fa-caret-down x_mobile_toggle_inv"></i></a><a class="x_mobile_toggle" href="#link1"><i class="fa fa-angle-double-right"></i></a>
-	<div class="xdojonav_underhover">
-		<ul class="wide_under">
-			<li class="ext_link"><a href="#sublinkwide">
-				<h4>Testo</h4><img src="link" alt="DB Image"/>
-				<p>Example of description for link.</p></a>
-			</li>
-		</ul>
-		<ul>
+<li><a href="#link1"><i class="fa fa-home"></i> Link1 <i class="xen_dropdown"></i></a><a class="xen_mobile_toggle" href="#"><i class="xen_dropright"></i></a>
+	<div class="xen_sub">
+		<ul class="xen_wide">
 			<li>
-				<a href="#sublink1">
-					<h4>Testo</h4>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!</p>
-				</a>
-			</li>
-			<li>
-				<a href="#sublink2">
-					<h4>Testo</h4>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!</p>
+				<a href="#sublinkwide">
+					<h4>Link</h4>
+					<img src="link" alt="DB Image" style="max-width:40px"/>
+					<p>Description.</p>
 				</a>
 			</li>
 		</ul>
@@ -164,17 +153,33 @@ Instead a multilevel menu in build this way:
 			<li>
 				<a href="#sublink1">
 					<h4>Testo</h4>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!</p>
+					<p>Description.</p>
+				</a>
+			</li>
+			<li class="xen_ext_link">
+				<a href="#sublink2">
+					<h4>Testo</h4>
+					<p>Description.</p>
+				</a>
+			</li>
+		</ul>
+		<ul>
+			<li class="xen_ext_link">
+				<a href="#sublink1">
+					<h4>Testo</h4>
+					<p>Description.</p>
 				</a>
 			</li>
 			<li>
 				<a href="#sublink2">
 					<h4>Testo</h4>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!</p>
+					<p>Description.</p>
 				</a>
 			</li>
 		</ul>
-	<div class="underhover_bottom"><a href="#bottomlink">... just a fast link <i class="fa fa-angle-double-right"> </i></a></div>
+		<div class="xen_sub_footer">
+			<a href="#bottomlink">... just a fast link <i class="xen_sub_foot_icon"></i></a>
+		</div>
 	</div>
 </li>
 ```
@@ -185,12 +190,12 @@ Complex structure? Not so much. In this example there is all possibility for cus
 The structure is quite simple: `ul` define the column and the `li` the items inside the column. The below is a typical example of a submenu with 2 column and 2 items inside (one for col). 
 
 ```html
-	<div class="xdojonav_underhover">
+	<div class="xen_sub">
 		<ul>
 			<li>
 				<a href="#sublink1">
 					<h4>Testo</h4>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!</p>
+					<p>Description.</p>
 				</a>
 			</li>
 		<ul><!-- .left menu w/ 1 item -->
@@ -198,22 +203,22 @@ The structure is quite simple: `ul` define the column and the `li` the items ins
 			<li>
 				<a href="#sublink2">
 					<h4>Testo</h4>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!</p>
+					<p>Description.</p>
 				</a>
 			</li>
 		</ul><!-- .right menu w/ 1 item -->
 	</div>
 ```
 
-We also have a 3 cols menu. We can build a simila example with a 3 col menu and 3 items (one per col). For this task we can use this class `xdojonav_underhover_xl` instead of using the normal `xdojonav_underhover`.
+We also have a 3 cols menu. We can build a simila example with a 3 col menu and 3 items (one per col). For this task we can use this class `xen_sub_xl` instead of using the normal `xen_sub`.
 
 ```html
-	<div class="xdojonav_underhover_xl">
+	<div class="xen_sub_xl">
 		<ul>
 			<li>
 				<a href="#sublink1">
 					<h4>Testo</h4>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!</p>
+					<p>Description.</p>
 				</a>
 			</li>
 		</ul><!-- .left menu w/ 1 item -->
@@ -221,7 +226,7 @@ We also have a 3 cols menu. We can build a simila example with a 3 col menu and 
 			<li>
 				<a href="#sublink2">
 					<h4>Testo</h4>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!</p>
+					<p>Description.</p>
 				</a>
 			</li>
 		<ul><!-- .center menu w/ 1 item -->
@@ -229,22 +234,22 @@ We also have a 3 cols menu. We can build a simila example with a 3 col menu and 
 			<li>
 				<a href="#sublink3">
 					<h4>Testo</h4>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!</p>
+					<p>Description.</p>
 				</a>
 			</li>
 		</ul><!-- .right menu w/ 1 item -->
 	</div>
 ```
 
-More simple now eh! (i hope eheheheh). So we can have also a wide item (long 2 or 3 col depends on submenu) in this way and with the help of this class `wide_under`. In this exaple we will bild a 3 item menu (1 wide + 2 normal - 1 per col). and the code is just like this
+More simple now eh! (i hope eheheheh). So we can have also a wide item (long 2 or 3 col depends on submenu) in this way and with the help of this class `xen_wide`. In this exaple we will bild a 3 item menu (1 wide + 2 normal - 1 per col). and the code is just like this
 
 ```html
-	<div class="xdojonav_underhover">
-		<ul>
+	<div class="xen_sub">
+		<ul class="xen_wide">
 			<li>
 				<a href="#sublink1">
 					<h4>Testo</h4>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!</p>
+					<p>Description.</p>
 				</a>
 			</li>
 		<ul><!-- .wide menu w/ 1 item long 2 cols -->
@@ -253,7 +258,7 @@ More simple now eh! (i hope eheheheh). So we can have also a wide item (long 2 o
 			<li>
 				<a href="#sublink2">
 					<h4>Testo</h4>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!</p>
+					<p>Description.</p>
 				</a>
 			</li>
 		</ul><!-- .left menu w/ 1 item -->
@@ -261,7 +266,7 @@ More simple now eh! (i hope eheheheh). So we can have also a wide item (long 2 o
 			<li>
 				<a href="#sublink2">
 					<h4>Testo</h4>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!</p>
+					<p>Description.</p>
 				</a>
 			</li>
 		</ul><!-- .right menu w/ 1 item -->
@@ -269,14 +274,14 @@ More simple now eh! (i hope eheheheh). So we can have also a wide item (long 2 o
 ```
 
 #### Esternal links and Image customize
-We can use a simple tricks for notify the external link or a target blank links with the help od a smarter class called `ext_link` used in li sub item in this way
+We can use a simple tricks for notify the external link or a target blank links with the help od a smarter class called `xen_ext_link` used in li sub item in this way
 
 ```html
 		</ul>
-			<li class="ext_link"><!-- .external menu link item -->
+			<li class="xen_ext_link"><!-- .external menu link item -->
 				<a href="#sublink2">
 					<h4>Testo</h4>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!</p>
+					<p>Description.</p>
 				</a>
 			</li>
 		</ul>
@@ -284,7 +289,7 @@ We can use a simple tricks for notify the external link or a target blank links 
 			<li><!-- .normal menu link item -->
 				<a href="#sublink2">
 					<h4>Testo</h4>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium!</p>
+					<p>Description.</p>
 				</a>
 			</li>
 		</ul>
@@ -296,7 +301,7 @@ The icon color will auto adjust its color in case the background is darker or li
 In mobile version we must add a sort of submenu opener button (in reality is a link) for allow to display the submenu area. It appears only into mobile version of this code. So the syntax to respet to have this funcion is the follow:  
 
 ```html
-<li><a href="#link1"><i class="fa fa-home"></i> Link1 <i class="fa fa-caret-down x_mobile_toggle_inv"></i></a><a class="x_mobile_toggle" href="#link1"><i class="fa fa-angle-double-right"></i></a>
+<li><a href="#link1"><i class="fa fa-home"></i> Link1 <i class="xen_dropdown"></i></a><a class="xen_mobile_toggle" href="#"><i class="xen_dropright"></i></a>
 ```
 
 Is not an automatic function and that's because is not a JS way. I also not use the particular CSS3 techniques for just a personal feelings.  

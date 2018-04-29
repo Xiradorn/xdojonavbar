@@ -15,10 +15,10 @@
 			@if ( map-get($configurator, 'color_levels_variations') >= 1 )
 				@for $i from 1 through map-get($configurator, 'color_levels_variations')
 					&.#{$xdojonav}_#{$i}
-						+navbar_coloring_type_rendering('darken')
+						+navbar_coloring_type_rendering('darken',$color_ary, $i)
 
-					&.#{$xdojonav}_light_#{$i}
-						+navbar_coloring_type_rendering('lighten')
+					&.#{$xdojonav}_lt_#{$i}
+						+navbar_coloring_type_rendering('lighten', $color_ary, $i)
 			
 			ul 
 				li 
@@ -69,7 +69,7 @@
 						&.#{$xdojonav}_#{$i}
 							.xen_menu_mobile
 								background: x-color('darken',map-get($color_ary, hover),$i)
-						&.#{$xdojonav}_light_#{$i}
+						&.#{$xdojonav}_lt_#{$i}
 							.xen_menu_mobile
 								background: x-color('lighten',map-get($color_ary, hover),$i)		
 				.xen_menu_mobile
@@ -96,7 +96,7 @@
 				@if ( map-get($configurator, 'color_levels_variations') >= 1 )
 					@for $i from 1 through map-get($configurator, 'color_levels_variations')
 						&.#{$xdojonav}_#{$i}
-							+navbar_coloring_type_rendering_mobile('darken')
+							+navbar_coloring_type_rendering_mobile('darken', $color_ary, $i)
 
-						&.#{$xdojonav}_light_#{$i}
-							+navbar_coloring_type_rendering_mobile('lighten')
+						&.#{$xdojonav}_lt_#{$i}
+							+navbar_coloring_type_rendering_mobile('lighten', $color_ary, $i)
