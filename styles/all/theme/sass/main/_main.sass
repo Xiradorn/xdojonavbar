@@ -23,7 +23,11 @@
 			& > a, 
 			& > a:link, 
 			& > a:visited 
-				padding: 10px 20px
+				padding: 
+					top: 10px 
+					bottom: 10px 
+					left: map-get($configurator, link_padding)
+					right: map-get($configurator, link_padding)
 				display: block
 				text:
 					decoration: none

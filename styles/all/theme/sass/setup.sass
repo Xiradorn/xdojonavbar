@@ -1,6 +1,7 @@
 //
 // Vars for config stuff 
 //
+@import '0-config/_config'
 
 /*!
  * Tempo per l'Animazione del sottomenu
@@ -10,10 +11,10 @@
  * rimpiazza la linea transition: opacity 200ms ease-in-out
  * con transition: none !important;
  */
-.xdnav 
+.xen 
 	ul
 		li
-			& > div.xdnav_sub, & > div.xdnav_sub_xl
+			& > div.xen_sub, & > div.xen_sub_xl
 				transition: opacity 200ms ease-in-out
 	
 /*!
@@ -30,7 +31,23 @@
  * Basterà cambiare block con none per farla apparire
  * Attualmente su block quindi presente  
  */
-.xdnav 
+.xen 
 	ul 
-		&.xdnav_finder
+		&.xen_finder
 			display: block
+
+
+/*!
+ * Configura il padding tra i link. Il velore di default è 20
+ * se il menu ha molti link puoi ridurlo e fare posto a più
+ * elementi
+ */
+.xen 
+	ul 
+		li 
+			& > a, 
+			& > a:link, 
+			& > a:visited 
+				padding: 
+					left: map-get($configurator, link_padding)
+					right: map-get($configurator, link_padding)

@@ -1,5 +1,5 @@
 # xSensei - xDojo Navbar
-#### Extension Version: 2.6.0  
+#### Extension Version: 2.7.0  
 
 _**Desktop Version**_  
 ![screen1](contrib/screen.jpg "screen1") 
@@ -64,6 +64,9 @@ Currently it perfectly work on prosilver and prosilver Special Edition. Other st
 
 **Permissions:**  
 Ftp permission for customization process.  
+
+## License  
+[GPLv2](license.txt)  
 
 ----    
 ## Customization Process:  

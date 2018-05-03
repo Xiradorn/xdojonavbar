@@ -7,7 +7,7 @@
  * rimpiazza la linea transition: opacity 200ms ease-in-out
  * con transition: none !important;
  */
-.xdnav ul li > div.xdnav_sub, .xdnav ul li > div.xdnav_sub_xl {
+.xen ul li > div.xen_sub, .xen ul li > div.xen_sub_xl {
   -webkit-transition: opacity 200ms ease-in-out;
   -o-transition: opacity 200ms ease-in-out;
   transition: opacity 200ms ease-in-out;
@@ -27,6 +27,18 @@
  * Basterà cambiare block con none per farla apparire
  * Attualmente su block quindi presente
  */
-.xdnav ul.xdnav_finder {
+.xen ul.xen_finder {
   display: block;
+}
+
+/*!
+ * Configura il padding tra i link. Il velore di default è 20
+ * se il menu ha molti link puoi ridurlo e fare posto a più
+ * elementi
+ */
+.xen ul li > a,
+.xen ul li > a:link,
+.xen ul li > a:visited {
+  padding-left: 20px;
+  padding-right: 20px;
 }
