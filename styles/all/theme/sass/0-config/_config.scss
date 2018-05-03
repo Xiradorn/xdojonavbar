@@ -1,11 +1,11 @@
 // config file for development
 $configurator: (
     // suggested to remain until 25 or 30 levels ( because you have double levels )
-    color_levels_variations: 20,
+    color_levels_variations: 0,
     //link padding sides
     link_padding: 20px,
     // Mode allowed: full, minimal, custom, rgb
-    minimal_colors: 'full',
+    minimal_colors: 'custom',
     // Mode allowed: both, colors, auto
     auto_style_color_activator: 'both',
     // Customize the ary for custom color develop.
