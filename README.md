@@ -36,6 +36,7 @@ _Inspired form **phpbb Nav Menu** and totally rewritted from scratch in jade/sas
 * Image on rightside (suggested for only wide element)
 * Footer submenu element link on bottom
 * Fade CSS efx with config value
+* Config file setup.css for change some values
 
 **For Developers:**  
 * written in JADE (PUG) and SASS
