@@ -1,0 +1,5 @@
+services:
+    xiradorn.xdojonavbar.listener:
+        class: xiradorn\xdojonavbar\event\main_listener
+        tags:
+            - { name: event.listener }
