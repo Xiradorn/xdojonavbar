@@ -77,8 +77,8 @@ class install_xen_schema extends \phpbb\db\migration\migration
 	{
 		return array(
 			'drop_tables'	=> array(
-				$this->table_prefix . 'xiradorn_xen_config',
-				$this->table_prefix . 'xiradorn_xen_items',
+				$this->table_prefix . 'xen_config',
+				$this->table_prefix . 'xen_items',
 			),
 		);
 	}
