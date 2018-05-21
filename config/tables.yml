@@ -1,0 +1,3 @@
+parameters:
+    xiradorn.xdojonavbar.table.xen_config: %core.table_prefix%xen_config
+    xiradorn.xdojonavbar.table.xen_items: %core.table_prefix%xen_items

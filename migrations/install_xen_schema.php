@@ -39,18 +39,17 @@ class install_xen_schema extends \phpbb\db\migration\migration
 		 */
 		return array(
 			'add_tables'	=> array(
-				$this->table_prefix . 'xiradorn_xen_config'	=> array(
+				$this->table_prefix . 'xdojonavbar_config'	=> array(
 					'COLUMNS'	=> array(
-						'xen_config_id'					=> array('UINT', null, 'auto_increment'),
 						'xen_config_param'				=> array('VCHAR', ''),
 						'xen_config_value'				=> array('VCHAR', ''),
 						'xen_config_extra'				=> array('VCHAR', ''),
 					),
 					'PRIMARY_KEY'	=> array(
-						'xen_config_id',
+						'xen_config_param',
 					),
 				),
-				$this->table_prefix . 'xiradorn_xen_items'	=> array(
+				$this->table_prefix . 'xdojonavbar_items'	=> array(
 					'COLUMNS'	=> array(
 						'xen_item_id'					=> array('UINT', null, 'auto_increment'),
 						'xen_item_title'				=> array('TEXT', ''),
@@ -67,10 +66,21 @@ class install_xen_schema extends \phpbb\db\migration\migration
 						'xen_subitem_large_img_link'	=> array('TEXT', ''),
 					),
 					'PRIMARY_KEY'	=> array(
-						'xen_id',
+						'xen_item_id',
 					),
 				),
 			),
 		);
 	}
+
+	public function revert_schema() 
+	{
+		return array(
+			'drop_tables'	=> array(
+				$this->table_prefix . 'xiradorn_xen_config',
+				$this->table_prefix . 'xiradorn_xen_items',
+			),
+		);
+	}
+
 }
