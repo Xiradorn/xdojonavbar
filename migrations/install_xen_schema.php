@@ -39,7 +39,7 @@ class install_xen_schema extends \phpbb\db\migration\migration
 		 */
 		return array(
 			'add_tables'	=> array(
-				$this->table_prefix . 'xdojonavbar_config'	=> array(
+				$this->table_prefix . 'xen_config'	=> array(
 					'COLUMNS'	=> array(
 						'xen_config_param'				=> array('VCHAR', ''),
 						'xen_config_value'				=> array('VCHAR', ''),
@@ -49,16 +49,16 @@ class install_xen_schema extends \phpbb\db\migration\migration
 						'xen_config_param',
 					),
 				),
-				$this->table_prefix . 'xdojonavbar_items'	=> array(
+				$this->table_prefix . 'xen_items'	=> array(
 					'COLUMNS'	=> array(
 						'xen_item_id'					=> array('UINT', null, 'auto_increment'),
+						'xen_item_parent_id'			=> array('UINT', 0),
 						'xen_item_title'				=> array('TEXT', ''),
 						'xen_item_link'					=> array('TEXT', ''),
 						'xen_item_description'			=> array('TEXT', ''),
 						'xen_item_attributes'			=> array('TEXT', ''),
 						'xen_item_left_id'				=> array('UINT', 0),
 						'xen_item_right_id'				=> array('UINT', 0),
-						'xen_item_parent_id'			=> array('UINT', 0),
 						
 						'xen_subitem_enabled'			=> array('BOOL', 0),
 						'xen_subitem_type'				=> array('UINT', 0),
